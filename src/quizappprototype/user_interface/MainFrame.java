@@ -27,43 +27,34 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        QuizContainer = new javax.swing.JPanel();
+        TopPanel = new javax.swing.JPanel();
+        BottomPanel = new javax.swing.JPanel();
+        InfoContainer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridLayout(2, 1));
+        getContentPane().setLayout(new java.awt.GridLayout(1, 2));
 
-        jPanel1.setToolTipText(null);
-        jPanel1.setOpaque(false);
+        QuizContainer.setToolTipText(null);
+        QuizContainer.setOpaque(false);
+        QuizContainer.setLayout(new java.awt.GridLayout(2, 1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1164, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
-        );
+        TopPanel.setToolTipText(null);
+        TopPanel.setOpaque(false);
+        TopPanel.setLayout(new java.awt.GridLayout());
+        QuizContainer.add(TopPanel);
 
-        getContentPane().add(jPanel1);
+        BottomPanel.setToolTipText(null);
+        BottomPanel.setOpaque(false);
+        BottomPanel.setLayout(new java.awt.GridLayout());
+        QuizContainer.add(BottomPanel);
 
-        jPanel2.setToolTipText(null);
-        jPanel2.setOpaque(false);
+        getContentPane().add(QuizContainer);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1164, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(jPanel2);
+        InfoContainer.setToolTipText(null);
+        InfoContainer.setOpaque(false);
+        InfoContainer.setLayout(new java.awt.GridLayout());
+        getContentPane().add(InfoContainer);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -104,7 +95,9 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel BottomPanel;
+    private javax.swing.JPanel InfoContainer;
+    private javax.swing.JPanel QuizContainer;
+    private javax.swing.JPanel TopPanel;
     // End of variables declaration//GEN-END:variables
 }
