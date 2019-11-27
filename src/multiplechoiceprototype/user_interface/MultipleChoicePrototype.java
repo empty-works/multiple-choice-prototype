@@ -13,6 +13,13 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
      */
     public MultipleChoicePrototype() {
         initComponents();
+        
+        addQuestion();
+    }
+    
+    private void addQuestion() {
+        
+        
     }
 
     @SuppressWarnings("unchecked")
