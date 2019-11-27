@@ -5,10 +5,21 @@
  */
 package multiplechoiceprototype.question_answer_processing;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author MP
  */
 public class AnswerProcessor {
     
+    public static List<String> getAnswers() {
+        
+        List<String> answers = new ArrayList<>();
+        
+        
+        
+        return answers;
+    }
 }

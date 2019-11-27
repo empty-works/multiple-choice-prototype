@@ -21,6 +21,11 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
         
         
     }
+    
+    private void addAnswers() {
+        
+        
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
