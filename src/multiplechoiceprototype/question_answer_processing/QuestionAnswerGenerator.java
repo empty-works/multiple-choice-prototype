@@ -12,6 +12,13 @@ public class QuestionAnswerGenerator {
         
         QAContainer con = new QAContainer();
         
+        con.question = getQuestion();
+        
         return con;
+    }
+    
+    private static String getQuestion() {
+        
+        return QuestionProcessor.getQuestion();
     }
 }
