@@ -20,6 +20,7 @@ public class QuestionProcessor {
         if(index != QuestionAnswerGenerator.INVALID_QA) {
             
             question = TestQuestionBean.getQuestionList().get(index);
+            System.out.println("Question: " + question);
         }
 
         return question;

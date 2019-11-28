@@ -7,6 +7,7 @@ package multiplechoiceprototype.question_answer_processing;
 
 import java.util.ArrayList;
 import java.util.List;
+import test_items.TestAnswerBean;
 
 /**
  *
@@ -18,7 +19,10 @@ public class AnswerProcessor {
         
         List<String> answers = new ArrayList<>();
         
-        
+        if(index != QuestionAnswerGenerator.INVALID_QA) {
+            
+            answers = TestAnswerBean.getAnswerList();
+        }
         
         return answers;
     }
