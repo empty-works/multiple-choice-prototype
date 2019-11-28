@@ -13,6 +13,7 @@ public class TestQuestionBean {
     
     private static List<String> questionList = new ArrayList<>();
     
+    public static int numQuestions = 8; // Temporary.
     public static List<String> getQuestionList() {
         
         questionList.add("By area, which is the largest continent on the planet?");

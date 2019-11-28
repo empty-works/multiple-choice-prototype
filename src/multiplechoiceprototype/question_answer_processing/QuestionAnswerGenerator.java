@@ -3,6 +3,9 @@
 package multiplechoiceprototype.question_answer_processing;
 
 import java.util.List;
+import java.util.Random;
+import test_items.TestAnswerBean;
+import test_items.TestQuestionBean;
 
 /**
  *
@@ -24,6 +27,12 @@ public class QuestionAnswerGenerator {
     private static int getRandomIndex() {
         
         int num = 0;
+        
+        if(TestQuestionBean.numQuestions == TestAnswerBean.numQuestions) {
+            
+            Random random = new Random();
+            num = random.nextInt(TestQuestionBean.numQuestions - 0) + 0;
+        }
         
         return num;
     }

@@ -13,6 +13,7 @@ public class TestAnswerBean {
     
     private static List<String> answerList = new ArrayList<>();
     
+    public static int numQuestions = 8; // Temporary.
     public static List<String> getAnswerList() {
         
         answerList.add("Asia-South America-Africa-Antartica");
