@@ -24,14 +24,16 @@ public class QuestionAnswerGenerator {
         return con;
     }
     
+    final public static int INVALID_QA = -1;
     private static int getRandomIndex() {
         
-        int num = 0;
+        int num = INVALID_QA;
         
         if(TestQuestionBean.numQuestions == TestAnswerBean.numQuestions) {
             
             Random random = new Random();
             num = random.nextInt(TestQuestionBean.numQuestions - 0) + 0;
+            System.out.println("Randon index: " + num);
         }
         
         return num;

@@ -5,6 +5,8 @@
  */
 package multiplechoiceprototype.question_answer_processing;
 
+import test_items.TestQuestionBean;
+
 /**
  *
  * @author MP
@@ -15,8 +17,11 @@ public class QuestionProcessor {
         
         String question = "";
         
-        
-        
+        if(index != QuestionAnswerGenerator.INVALID_QA) {
+            
+            question = TestQuestionBean.getQuestionList().get(index);
+        }
+
         return question;
     }
 }
