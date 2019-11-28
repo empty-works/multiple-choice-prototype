@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class AnswerProcessor {
     
-    public static List<String> getAnswers() {
+    public static List<String> getAnswers(int index) {
         
         List<String> answers = new ArrayList<>();
         

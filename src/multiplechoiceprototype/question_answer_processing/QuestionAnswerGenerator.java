@@ -2,6 +2,8 @@
  */
 package multiplechoiceprototype.question_answer_processing;
 
+import java.util.List;
+
 /**
  *
  * @author MP
@@ -12,13 +14,27 @@ public class QuestionAnswerGenerator {
         
         QAContainer con = new QAContainer();
         
-        con.question = getQuestion();
+        int randomIndex = getRandomIndex();
+        con.question = getQuestion(randomIndex);
+        con.answers = getAnswers(randomIndex);
         
         return con;
     }
     
-    private static String getQuestion() {
+    private static int getRandomIndex() {
         
-        return QuestionProcessor.getQuestion();
+        int num = 0;
+        
+        return num;
+    }
+    
+    private static String getQuestion(int index) {
+        
+        return QuestionProcessor.getQuestion(index);
+    }
+    
+    private static List<String> getAnswers(int index) {
+        
+        return AnswerProcessor.getAnswers(index);
     }
 }

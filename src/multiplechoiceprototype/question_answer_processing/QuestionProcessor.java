@@ -11,9 +11,11 @@ package multiplechoiceprototype.question_answer_processing;
  */
 public class QuestionProcessor {
     
-    public static String getQuestion() {
+    public static String getQuestion(int index) {
         
         String question = "";
+        
+        
         
         return question;
     }
