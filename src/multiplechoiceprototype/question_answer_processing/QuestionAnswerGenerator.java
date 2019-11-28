@@ -20,6 +20,7 @@ public class QuestionAnswerGenerator {
         int randomIndex = getRandomIndex();
         con.question = getQuestion(randomIndex);
         con.answers = getAnswers(randomIndex);
+        con.correctAnswer = con.answers.get(0); // For now, first element is correct answer.
         
         return con;
     }

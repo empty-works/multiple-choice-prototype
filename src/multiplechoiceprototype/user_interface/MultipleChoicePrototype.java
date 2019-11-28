@@ -20,11 +20,22 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
         initComponents();
         
         getQACon();
+        setQuestion();
     }
     
     private void getQACon() {
         
         QACon = QuestionAnswerGenerator.getQACon();
+    }
+    
+    private void setQuestion() {
+        
+        
+    }
+    
+    private void setAnswers() {
+        
+        
     }
 
     @SuppressWarnings("unchecked")
