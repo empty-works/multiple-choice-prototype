@@ -2,29 +2,29 @@
  */
 package multiplechoiceprototype.user_interface;
 
+import multiplechoiceprototype.question_answer_processing.QAContainer;
+import multiplechoiceprototype.question_answer_processing.QuestionAnswerGenerator;
+
 /**
  *
  * @author MP
  */
 public class MultipleChoicePrototype extends javax.swing.JFrame {
 
+    private QAContainer QACon;
+    
     /**
      * 
      */
     public MultipleChoicePrototype() {
         initComponents();
         
-        addQuestion();
+        getQACon();
     }
     
-    private void addQuestion() {
+    private void getQACon() {
         
-        
-    }
-    
-    private void addAnswers() {
-        
-        
+        QACon = QuestionAnswerGenerator.getQACon();
     }
 
     @SuppressWarnings("unchecked")
