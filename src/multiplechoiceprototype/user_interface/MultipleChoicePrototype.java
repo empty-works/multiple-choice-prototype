@@ -21,6 +21,7 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
         
         getQACon();
         setQuestion();
+        setAnswers();
     }
     
     private void getQACon() {
@@ -30,7 +31,9 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
     
     private void setQuestion() {
         
-        
+        QuestionPanel qp = new QuestionPanel();
+        qp.setQuestion(QACon.question);
+        TopPanel.add(qp);
     }
     
     private void setAnswers() {
