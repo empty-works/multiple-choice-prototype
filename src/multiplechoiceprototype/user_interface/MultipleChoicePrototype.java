@@ -65,7 +65,7 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
 
         BottomPanel.setToolTipText(null);
         BottomPanel.setOpaque(false);
-        BottomPanel.setLayout(new java.awt.GridLayout(1, 0));
+        BottomPanel.setLayout(new java.awt.GridLayout(4, 1));
         QuizContainer.add(BottomPanel);
 
         getContentPane().add(QuizContainer);

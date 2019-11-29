@@ -33,6 +33,8 @@ public class QuestionPanel extends javax.swing.JPanel {
         setToolTipText(null);
         setLayout(new java.awt.GridBagLayout());
 
+        QuestionLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        QuestionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         QuestionLabel.setToolTipText(null);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
