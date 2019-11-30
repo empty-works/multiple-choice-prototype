@@ -14,7 +14,7 @@ public class TestAnswerBean {
     private static List<String> answerList = new ArrayList<>();
     
     public static int numQuestions = 8; // Temporary.
-    public static List<String> getAnswerList() {
+    public static void setAnswerList() {
         
         answerList.add("Asia-South America-Africa-Antartica");
         answerList.add("Mediterranean-Indian-Caribbean-Baltic");
@@ -24,6 +24,10 @@ public class TestAnswerBean {
         answerList.add("Charlie and the Chocolate Factory-Matilda-The Witches-The BFG");
         answerList.add("Harry Potter-Shannara-Dying Earth-Shades of Magic");
         answerList.add("Moorfield-Mile End-Mount Vernon-Maudsley");
-        return answerList;
+    }
+    
+    public static String getAnswerList(int index) {
+        
+        return answerList.get(index);
     }
 }

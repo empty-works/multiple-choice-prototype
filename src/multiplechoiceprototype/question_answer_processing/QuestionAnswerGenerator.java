@@ -2,7 +2,6 @@
  */
 package multiplechoiceprototype.question_answer_processing;
 
-import java.util.List;
 import java.util.Random;
 import test_items.TestAnswerBean;
 import test_items.TestQuestionBean;
@@ -19,6 +18,7 @@ public class QuestionAnswerGenerator {
         
         int randomIndex = getRandomIndex();
         con.question = getQuestion(randomIndex);
+        TestAnswerBean.setAnswerList();
         AnswerProcessor.setAnswers(con, randomIndex);
         
         return con;

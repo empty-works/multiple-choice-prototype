@@ -19,7 +19,7 @@ public class AnswerProcessor {
         
         if(index != QuestionAnswerGenerator.INVALID_QA) {
             
-            con.answers = TestAnswerBean.getAnswerList();
+            String answerString = TestAnswerBean.getAnswerList(index);
         }
     }
 }
