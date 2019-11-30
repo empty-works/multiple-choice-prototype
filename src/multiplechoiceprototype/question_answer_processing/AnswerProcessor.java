@@ -22,9 +22,17 @@ public class AnswerProcessor {
             String answerString = TestAnswerBean.getAnswerList(index);
             String[] answers = answerString.split("-");
             con.correctAnswer = answers[0]; // For now, first element is correct answer.
+            setAnswersList(con, answers);
+            // Now randomize the answers list in the QAContainer.
             
         }
     }
     
-    
+    private static void setAnswersList(QAContainer con, String[] answerArray) {
+        
+        for(int i = 0; i < answerArray.length; i++) {
+            
+            con.answers.add(answerArray[i]);
+        }
+    }
 }

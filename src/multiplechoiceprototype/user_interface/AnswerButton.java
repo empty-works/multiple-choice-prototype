@@ -47,7 +47,6 @@ public class AnswerButton extends javax.swing.JPanel {
         ButtonLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         setToolTipText(null);
         setLayout(new java.awt.GridBagLayout());
 
