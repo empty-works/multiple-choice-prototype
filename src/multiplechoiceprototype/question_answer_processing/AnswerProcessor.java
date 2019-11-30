@@ -16,8 +16,6 @@ public class AnswerProcessor {
     
     public static void setAnswers(QAContainer con, int index) {
         
-        
-        
         if(index != QuestionAnswerGenerator.INVALID_QA) {
             
             String answerString = TestAnswerBean.getAnswerList(index);

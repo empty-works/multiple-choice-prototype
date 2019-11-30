@@ -17,7 +17,7 @@ public class QuestionAnswerGenerator {
     public static QAContainer getQACon() {
         
         int randomIndex = getRandomIndex();
-        con.question = getQuestion(randomIndex);
+        con.question = QuestionProcessor.getQuestion(randomIndex);
         TestAnswerBean.setAnswerList();
         AnswerProcessor.setAnswers(con, randomIndex);
         
@@ -37,10 +37,5 @@ public class QuestionAnswerGenerator {
         }
         
         return num;
-    }
-    
-    private static String getQuestion(int index) {
-        
-        return QuestionProcessor.getQuestion(index);
     }
 }
