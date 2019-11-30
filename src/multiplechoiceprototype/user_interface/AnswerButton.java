@@ -34,6 +34,10 @@ public class AnswerButton extends javax.swing.JPanel {
         }
     }
     
+    public boolean isCorrectAnswer() {
+        
+        return isCorrectAnswer;
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -42,8 +46,14 @@ public class AnswerButton extends javax.swing.JPanel {
 
         ButtonLabel = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        setToolTipText(null);
         setLayout(new java.awt.GridBagLayout());
 
+        ButtonLabel.setBackground(new java.awt.Color(255, 255, 255));
+        ButtonLabel.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        ButtonLabel.setForeground(new java.awt.Color(0, 0, 0));
         ButtonLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ButtonLabel.setText("jLabel1");
         ButtonLabel.setToolTipText(null);
