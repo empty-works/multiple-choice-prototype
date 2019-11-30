@@ -2,6 +2,8 @@
  */
 package multiplechoiceprototype.user_interface;
 
+import multiplechoiceprototype.question_answer_processing.QAContainer;
+
 /**
  *
  * @author MP
@@ -10,17 +12,26 @@ public class AnswerButton extends javax.swing.JPanel {
 
     private boolean isCorrectAnswer = false;
     private String text = "";
+    private QAContainer con;
     
     /**
      * 
      */
-    public AnswerButton(String text) {
+    public AnswerButton(QAContainer con, String text) {
         initComponents();
         
+        this.con = con;
         this.text = text;
+        setAsCorrectAnswer();
     }
     
-    
+    private void setAsCorrectAnswer() {
+        
+        if(con.correctAnswer.equals(text)) {
+            
+            isCorrectAnswer = true;
+        }
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
