@@ -5,6 +5,7 @@
  */
 package multiplechoiceprototype.question_answer_processing;
 
+import java.util.Collections;
 import test_items.TestAnswerBean;
 
 /**
@@ -24,7 +25,7 @@ public class AnswerProcessor {
             con.correctAnswer = answers[0]; // For now, first element is correct answer.
             setAnswersList(con, answers);
             // Now randomize the answers list in the QAContainer.
-            
+            Collections.shuffle(con.answers);
         }
     }
     
