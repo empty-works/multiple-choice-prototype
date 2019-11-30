@@ -5,8 +5,6 @@
  */
 package multiplechoiceprototype.question_answer_processing;
 
-import java.util.ArrayList;
-import java.util.List;
 import test_items.TestAnswerBean;
 
 /**
@@ -15,15 +13,13 @@ import test_items.TestAnswerBean;
  */
 public class AnswerProcessor {
     
-    public static List<String> getAnswers(int index) {
+    public static void setAnswers(QAContainer con, int index) {
         
-        List<String> answers = new ArrayList<>();
+        con.correctAnswer = con.answers.get(0); // For now, first element is correct answer.
         
         if(index != QuestionAnswerGenerator.INVALID_QA) {
             
-            answers = TestAnswerBean.getAnswerList();
+            con.answers = TestAnswerBean.getAnswerList();
         }
-        
-        return answers;
     }
 }

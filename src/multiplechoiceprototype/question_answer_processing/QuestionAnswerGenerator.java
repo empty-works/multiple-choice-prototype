@@ -13,14 +13,13 @@ import test_items.TestQuestionBean;
  */
 public class QuestionAnswerGenerator {
   
+    private static QAContainer con = new QAContainer();
+    
     public static QAContainer getQACon() {
-        
-        QAContainer con = new QAContainer();
         
         int randomIndex = getRandomIndex();
         con.question = getQuestion(randomIndex);
-        con.answers = getAnswers(randomIndex);
-        con.correctAnswer = con.answers.get(0); // For now, first element is correct answer.
+        AnswerProcessor.setAnswers(con, randomIndex);
         
         return con;
     }
@@ -43,10 +42,5 @@ public class QuestionAnswerGenerator {
     private static String getQuestion(int index) {
         
         return QuestionProcessor.getQuestion(index);
-    }
-    
-    private static List<String> getAnswers(int index) {
-        
-        return AnswerProcessor.getAnswers(index);
     }
 }
