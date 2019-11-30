@@ -15,11 +15,16 @@ public class AnswerProcessor {
     
     public static void setAnswers(QAContainer con, int index) {
         
-        con.correctAnswer = con.answers.get(0); // For now, first element is correct answer.
+        
         
         if(index != QuestionAnswerGenerator.INVALID_QA) {
             
             String answerString = TestAnswerBean.getAnswerList(index);
+            String[] answers = answerString.split("-");
+            con.correctAnswer = answers[0]; // For now, first element is correct answer.
+            
         }
     }
+    
+    
 }
