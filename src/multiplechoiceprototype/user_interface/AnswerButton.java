@@ -3,6 +3,7 @@
 package multiplechoiceprototype.user_interface;
 
 import java.awt.Color;
+import javax.swing.BorderFactory;
 import multiplechoiceprototype.question_answer_processing.QAContainer;
 
 /**
@@ -23,8 +24,14 @@ public class AnswerButton extends javax.swing.JPanel {
         
         this.correctAnswer = correctAnswer;
         this.text = text;
+        setVisualProperties();
         setText();
         setAsCorrectAnswer();
+    }
+    
+    private void setVisualProperties() {
+        
+        ButtonLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
     }
     
     private void setText() {
