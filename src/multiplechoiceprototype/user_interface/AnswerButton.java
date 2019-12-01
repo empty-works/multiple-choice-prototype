@@ -23,7 +23,13 @@ public class AnswerButton extends javax.swing.JPanel {
         
         this.correctAnswer = correctAnswer;
         this.text = text;
+        setText();
         setAsCorrectAnswer();
+    }
+    
+    private void setText() {
+        
+        ButtonLabel.setText(text);
     }
     
     private void setAsCorrectAnswer() {
