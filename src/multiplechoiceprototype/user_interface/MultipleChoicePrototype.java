@@ -19,6 +19,7 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
     public MultipleChoicePrototype() {
         initComponents();
         
+        this.setLocationRelativeTo(null);
         getQACon();
         setQuestion();
         setAnswers();
