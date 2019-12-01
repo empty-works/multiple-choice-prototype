@@ -13,22 +13,22 @@ public class AnswerButton extends javax.swing.JPanel {
 
     private boolean isCorrectAnswer = false;
     private String text = "";
-    private QAContainer con;
+    private String correctAnswer;
     
     /**
      * 
      */
-    public AnswerButton(QAContainer con, String text) {
+    public AnswerButton(String correctAnswer, String text) {
         initComponents();
         
-        this.con = con;
+        this.correctAnswer = correctAnswer;
         this.text = text;
         setAsCorrectAnswer();
     }
     
     private void setAsCorrectAnswer() {
         
-        if(con.correctAnswer.equals(text)) {
+        if(correctAnswer.equals(text)) {
             
             isCorrectAnswer = true;
         }

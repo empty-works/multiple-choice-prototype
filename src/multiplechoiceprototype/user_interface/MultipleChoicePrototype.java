@@ -38,7 +38,14 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
     
     private void setAnswers() {
         
-        
+        AnswerButton button1 = new AnswerButton(QACon.correctAnswer, QACon.answers.get(0));
+        BottomPanel.add(button1);
+        AnswerButton button2 = new AnswerButton(QACon.correctAnswer, QACon.answers.get(1));
+        BottomPanel.add(button2);
+        AnswerButton button3 = new AnswerButton(QACon.correctAnswer, QACon.answers.get(2));
+        BottomPanel.add(button3);
+        AnswerButton button4 = new AnswerButton(QACon.correctAnswer, QACon.answers.get(3));
+        BottomPanel.add(button4);
     }
 
     @SuppressWarnings("unchecked")
