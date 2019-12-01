@@ -12,6 +12,7 @@ import multiplechoiceprototype.question_answer_processing.QuestionAnswerGenerato
 public class MultipleChoicePrototype extends javax.swing.JFrame {
 
     private QAContainer QACon;
+    private AnswerButton correctAnswer = null;
     
     /**
      * 
@@ -20,6 +21,11 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
         initComponents();
         
         this.setLocationRelativeTo(null);
+        initAll();
+    }
+    
+    public void initAll() {
+        
         getQACon();
         setQuestion();
         setAnswers();
@@ -37,16 +43,22 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
         TopPanel.add(qp);
     }
     
+    public AnswerButton getCorrectAnswerButton() {
+        
+        return correctAnswer;
+    }
+    
     private void setAnswers() {
         
-        AnswerButton button1 = new AnswerButton(QACon.correctAnswer, QACon.answers.get(0));
-        BottomPanel.add(button1);
-        AnswerButton button2 = new AnswerButton(QACon.correctAnswer, QACon.answers.get(1));
-        BottomPanel.add(button2);
-        AnswerButton button3 = new AnswerButton(QACon.correctAnswer, QACon.answers.get(2));
-        BottomPanel.add(button3);
-        AnswerButton button4 = new AnswerButton(QACon.correctAnswer, QACon.answers.get(3));
-        BottomPanel.add(button4);
+        for(int i = 0; i < 4; i++) {
+            
+            AnswerButton answer = new AnswerButton(QACon.correctAnswer, QACon.answers.get(i));
+            BottomPanel.add(answer);
+            if(answer.isCorrectAnswer()) {
+                
+                correctAnswer = answer;
+            }
+        }
     }
 
     @SuppressWarnings("unchecked")
