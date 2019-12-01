@@ -4,7 +4,6 @@ package multiplechoiceprototype.user_interface;
 
 import java.awt.Color;
 import javax.swing.BorderFactory;
-import multiplechoiceprototype.question_answer_processing.QAContainer;
 
 /**
  *
