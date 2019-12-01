@@ -12,10 +12,11 @@ import test_items.TestQuestionBean;
  */
 public class QuestionAnswerGenerator {
   
-    private static QAContainer con = new QAContainer();
+    private static QAContainer con;
     
     public static QAContainer getQACon() {
         
+        con = new QAContainer(); // Instanstiated here to reset.
         int randomIndex = getRandomIndex();
         con.question = QuestionProcessor.getQuestion(randomIndex);
         TestAnswerBean.setAnswerList();
