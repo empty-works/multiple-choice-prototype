@@ -32,7 +32,7 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
     private void setQuestion() {
         
         QuestionPanel qp = new QuestionPanel();
-        qp.setQuestion(QACon.question);
+        qp.setQuestion("<html>" + QACon.question + "</html>");
         TopPanel.add(qp);
     }
     
