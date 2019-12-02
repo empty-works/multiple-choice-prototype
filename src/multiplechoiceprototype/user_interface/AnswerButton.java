@@ -62,6 +62,14 @@ public class AnswerButton extends javax.swing.JPanel {
             ButtonLabel.setBackground(color);
         }
     }
+    
+    private void setAnswerButtonsUnclickable() {
+        
+        for(AnswerButton button : MainFrame.buttonList) {
+            
+            button.setIsClickable(false);
+        }
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -120,6 +128,7 @@ public class AnswerButton extends javax.swing.JPanel {
             
             setButtonColor(MyColors.INCORRECT_COLOR);
         }
+        setAnswerButtonsUnclickable();
     }//GEN-LAST:event_ButtonLabelMousePressed
 
 

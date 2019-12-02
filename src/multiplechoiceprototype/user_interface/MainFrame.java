@@ -11,16 +11,16 @@ import multiplechoiceprototype.question_answer_processing.QuestionAnswerGenerato
  *
  * @author MP
  */
-public class MultipleChoicePrototype extends javax.swing.JFrame {
+public class MainFrame extends javax.swing.JFrame {
 
     private QAContainer QACon;
-    private AnswerButton correctAnswer = null;
-    private List<AnswerButton> buttonList = new ArrayList<>();
+    public static AnswerButton correctAnswer = null;
+    public static List<AnswerButton> buttonList;
     
     /**
      * 
      */
-    public MultipleChoicePrototype() {
+    public MainFrame() {
         initComponents();
         
         this.setLocationRelativeTo(null);
@@ -37,6 +37,7 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
     private void getQACon() {
         
         QACon = QuestionAnswerGenerator.getQACon();
+        buttonList = new ArrayList<>();
     }
     
     private void setQuestion() {
@@ -119,14 +120,18 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MultipleChoicePrototype.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MultipleChoicePrototype.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MultipleChoicePrototype.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MultipleChoicePrototype.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -135,7 +140,7 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MultipleChoicePrototype().setVisible(true);
+                new MainFrame().setVisible(true);
             }
         });
     }
