@@ -10,6 +10,6 @@ import java.awt.Color;
  */
 public class MyColors {
     
-    final static Color CorrectColor = new Color(86, 255, 71);
-    final static Color IncorrectColor = new Color(255, 79, 105);
+    final public static Color CorrectColor = new Color(86, 255, 71);
+    final public static Color IncorrectColor = new Color(255, 79, 105);
 }

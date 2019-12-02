@@ -4,6 +4,7 @@ package multiplechoiceprototype.user_interface;
 
 import java.awt.Color;
 import javax.swing.BorderFactory;
+import multiplechoiceprototype.beans.MyColors;
 
 /**
  *
@@ -100,7 +101,14 @@ public class AnswerButton extends javax.swing.JPanel {
 
     private void ButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMousePressed
         
-       
+        if(isCorrectAnswer) {
+            
+            ButtonLabel.setBackground(MyColors.CorrectColor);
+        }
+        else {
+            
+            ButtonLabel.setBackground(MyColors.IncorrectColor);
+        }
     }//GEN-LAST:event_ButtonLabelMousePressed
 
 
