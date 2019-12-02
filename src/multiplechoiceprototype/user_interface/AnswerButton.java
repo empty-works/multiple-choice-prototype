@@ -52,6 +52,11 @@ public class AnswerButton extends javax.swing.JPanel {
         
         return isCorrectAnswer;
     }
+    
+    public void setIsClickable(boolean canClick) {
+        
+        isClickable = canClick;
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -104,11 +109,11 @@ public class AnswerButton extends javax.swing.JPanel {
         
         if(isCorrectAnswer) {
             
-            ButtonLabel.setBackground(MyColors.CorrectColor);
+            ButtonLabel.setBackground(MyColors.CORRECT_COLOR);
         }
         else {
             
-            ButtonLabel.setBackground(MyColors.IncorrectColor);
+            ButtonLabel.setBackground(MyColors.INCORRECT_COLOR);
         }
     }//GEN-LAST:event_ButtonLabelMousePressed
 
