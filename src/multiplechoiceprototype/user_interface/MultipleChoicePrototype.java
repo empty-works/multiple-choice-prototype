@@ -57,6 +57,7 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
             if(answer.isCorrectAnswer()) {
                 
                 correctAnswer = answer;
+                QACon.correctAnswerButton = answer;
             }
         }
     }
