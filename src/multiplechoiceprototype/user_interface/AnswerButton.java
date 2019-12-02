@@ -57,6 +57,14 @@ public class AnswerButton extends javax.swing.JPanel {
         
         isClickable = canClick;
     }
+    
+    private void setButtonColor(Color color) {
+        
+        if(isClickable) {
+            
+            ButtonLabel.setBackground(color);
+        }
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -97,23 +105,23 @@ public class AnswerButton extends javax.swing.JPanel {
 
     private void ButtonLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseEntered
         
-        ButtonLabel.setBackground(Color.ORANGE);
+        setButtonColor(Color.ORANGE);
     }//GEN-LAST:event_ButtonLabelMouseEntered
 
     private void ButtonLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseExited
         
-        ButtonLabel.setBackground(Color.WHITE);
+        setButtonColor(Color.WHITE);
     }//GEN-LAST:event_ButtonLabelMouseExited
 
     private void ButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMousePressed
         
         if(isCorrectAnswer) {
             
-            ButtonLabel.setBackground(MyColors.CORRECT_COLOR);
+            setButtonColor(MyColors.CORRECT_COLOR);
         }
         else {
             
-            ButtonLabel.setBackground(MyColors.INCORRECT_COLOR);
+            setButtonColor(MyColors.INCORRECT_COLOR);
         }
     }//GEN-LAST:event_ButtonLabelMousePressed
 
