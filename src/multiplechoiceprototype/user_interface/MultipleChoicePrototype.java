@@ -2,6 +2,8 @@
  */
 package multiplechoiceprototype.user_interface;
 
+import java.util.ArrayList;
+import java.util.List;
 import multiplechoiceprototype.question_answer_processing.QAContainer;
 import multiplechoiceprototype.question_answer_processing.QuestionAnswerGenerator;
 
@@ -13,6 +15,7 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
 
     private QAContainer QACon;
     private AnswerButton correctAnswer = null;
+    private List<AnswerButton> buttonList = new ArrayList<>();
     
     /**
      * 
@@ -54,6 +57,7 @@ public class MultipleChoicePrototype extends javax.swing.JFrame {
             
             AnswerButton answer = new AnswerButton(QACon.correctAnswer, QACon.answers.get(i));
             BottomPanel.add(answer);
+            buttonList.add(answer);
             if(answer.isCorrectAnswer()) {
                 
                 correctAnswer = answer;

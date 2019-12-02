@@ -17,9 +17,6 @@ public class AnswerButton extends javax.swing.JPanel {
     private String correctAnswer;
     private boolean isClickable = true;
     
-    /**
-     * 
-     */
     public AnswerButton(String correctAnswer, String text) {
         initComponents();
         
