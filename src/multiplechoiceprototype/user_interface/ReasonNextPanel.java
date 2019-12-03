@@ -3,6 +3,7 @@
 package multiplechoiceprototype.user_interface;
 
 import multiplechoiceprototype.beans.MyColors;
+import multiplechoiceprototype.question_answer_processing.QAContainer;
 
 /**
  *
@@ -13,7 +14,7 @@ public class ReasonNextPanel extends javax.swing.JPanel {
     /**
      * 
      */
-    public ReasonNextPanel() {
+    public ReasonNextPanel(QAContainer QACon) {
         initComponents();
         
         setColors();
@@ -55,6 +56,8 @@ public class ReasonNextPanel extends javax.swing.JPanel {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
@@ -79,10 +82,12 @@ public class ReasonNextPanel extends javax.swing.JPanel {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(10, 0, 10, 10);
+        gridBagConstraints.insets = new java.awt.Insets(0, 10, 10, 10);
         add(NextButton, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 

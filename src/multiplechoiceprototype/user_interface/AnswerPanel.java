@@ -25,6 +25,7 @@ public class AnswerPanel extends javax.swing.JPanel {
         
         this.QACon = QACon;
         setAnswers();
+        setReasonNext();
     }
     
     private void setAnswers() {
@@ -41,13 +42,18 @@ public class AnswerPanel extends javax.swing.JPanel {
             }
         }
     }
+    
+    private void setReasonNext() {
+        
+        BottomPanel.add(new ReasonNextPanel(QACon));
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         TopPanel = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        BottomPanel = new javax.swing.JPanel();
 
         setToolTipText(null);
         setOpaque(false);
@@ -56,13 +62,13 @@ public class AnswerPanel extends javax.swing.JPanel {
         TopPanel.setLayout(new java.awt.GridLayout(4, 1));
         add(TopPanel);
 
-        jPanel2.setLayout(new java.awt.GridLayout());
-        add(jPanel2);
+        BottomPanel.setLayout(new java.awt.GridLayout());
+        add(BottomPanel);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BottomPanel;
     private javax.swing.JPanel TopPanel;
-    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
