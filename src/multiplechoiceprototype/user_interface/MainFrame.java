@@ -44,7 +44,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         QuestionPanel qp = new QuestionPanel();
         qp.setQuestion("<html>" + QACon.question + "</html>");
-        TopPanel.add(qp);
+        QuestionContainer.add(qp);
     }
     
     public AnswerButton getCorrectAnswerButton() {
@@ -54,10 +54,11 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void setAnswers() {
         
+        AnswerContainer.add(new AnswerPanel)
         for(int i = 0; i < 4; i++) {
             
             AnswerButton answer = new AnswerButton(QACon.correctAnswer, QACon.answers.get(i));
-            BottomPanel.add(answer);
+            AnswerContainer.add(answer);
             buttonList.add(answer);
             if(answer.isCorrectAnswer()) {
                 
@@ -70,36 +71,22 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        QuizContainer = new javax.swing.JPanel();
-        TopPanel = new javax.swing.JPanel();
-        InfoContainer = new javax.swing.JPanel();
-        BottomPanel = new javax.swing.JPanel();
+        QuestionContainer = new javax.swing.JPanel();
+        AnswerContainer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 640));
         getContentPane().setLayout(new java.awt.GridLayout(1, 2));
 
-        QuizContainer.setToolTipText(null);
-        QuizContainer.setOpaque(false);
-        QuizContainer.setLayout(new java.awt.GridLayout(2, 1));
+        QuestionContainer.setToolTipText(null);
+        QuestionContainer.setOpaque(false);
+        QuestionContainer.setLayout(new java.awt.GridLayout(1, 0));
+        getContentPane().add(QuestionContainer);
 
-        TopPanel.setToolTipText(null);
-        TopPanel.setOpaque(false);
-        TopPanel.setLayout(new java.awt.GridLayout(1, 0));
-        QuizContainer.add(TopPanel);
-
-        getContentPane().add(QuizContainer);
-
-        InfoContainer.setToolTipText(null);
-        InfoContainer.setOpaque(false);
-        InfoContainer.setLayout(new java.awt.GridLayout(1, 0));
-
-        BottomPanel.setToolTipText(null);
-        BottomPanel.setOpaque(false);
-        BottomPanel.setLayout(new java.awt.GridLayout(4, 1));
-        InfoContainer.add(BottomPanel);
-
-        getContentPane().add(InfoContainer);
+        AnswerContainer.setToolTipText(null);
+        AnswerContainer.setOpaque(false);
+        AnswerContainer.setLayout(new java.awt.GridLayout(4, 1));
+        getContentPane().add(AnswerContainer);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -147,9 +134,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel BottomPanel;
-    private javax.swing.JPanel InfoContainer;
-    private javax.swing.JPanel QuizContainer;
-    private javax.swing.JPanel TopPanel;
+    private javax.swing.JPanel AnswerContainer;
+    private javax.swing.JPanel QuestionContainer;
     // End of variables declaration//GEN-END:variables
 }
