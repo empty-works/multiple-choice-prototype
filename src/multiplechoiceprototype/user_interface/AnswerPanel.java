@@ -15,6 +15,7 @@ public class AnswerPanel extends javax.swing.JPanel {
     private QAContainer QACon;
     public static List<AnswerButton> buttonList = new ArrayList<>();
     public static AnswerButton correctAnswer = null;
+    final private int MAX_NUM_ANSWERS = 4;
     
     /**
      * 
@@ -23,13 +24,15 @@ public class AnswerPanel extends javax.swing.JPanel {
         initComponents();
         
         this.QACon = QACon;
+        setAnswers();
     }
     
-    public void setAnswers() {
+    private void setAnswers() {
         
-        for(int i = 0; i < 4; i++) {
+        for(int i = 0; i < MAX_NUM_ANSWERS; i++) {
             
-            AnswerButton answer = new AnswerButton(QACon.correctAnswer, QACon.answers.get(i));
+            AnswerButton answer = new AnswerButton(QACon.correctAnswer, 
+                    QACon.answers.get(i));
             TopPanel.add(answer);
             buttonList.add(answer);
             if(answer.isCorrectAnswer()) {
@@ -50,7 +53,7 @@ public class AnswerPanel extends javax.swing.JPanel {
         setOpaque(false);
         setLayout(new java.awt.GridLayout(2, 1));
 
-        TopPanel.setLayout(new java.awt.GridLayout());
+        TopPanel.setLayout(new java.awt.GridLayout(4, 1));
         add(TopPanel);
 
         jPanel2.setLayout(new java.awt.GridLayout());

@@ -45,7 +45,6 @@ public class MainFrame extends javax.swing.JFrame {
     private void setAnswers() {
         
         AnswerContainer.add(new AnswerPanel(QACon));
-        
     }
 
     @SuppressWarnings("unchecked")
@@ -66,7 +65,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         AnswerContainer.setToolTipText(null);
         AnswerContainer.setOpaque(false);
-        AnswerContainer.setLayout(new java.awt.GridLayout(4, 1));
+        AnswerContainer.setLayout(new java.awt.GridLayout(1, 1));
         getContentPane().add(AnswerContainer);
 
         pack();
