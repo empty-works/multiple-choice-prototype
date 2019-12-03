@@ -65,7 +65,7 @@ public class AnswerButton extends javax.swing.JPanel {
     
     private void setAnswerButtonsUnclickable() {
         
-        for(AnswerButton button : MainFrame.buttonList) {
+        for(AnswerButton button : AnswerPanel.buttonList) {
             
             button.setIsClickable(false);
         }

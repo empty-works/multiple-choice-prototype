@@ -2,8 +2,6 @@
  */
 package multiplechoiceprototype.user_interface;
 
-import java.util.ArrayList;
-import java.util.List;
 import multiplechoiceprototype.question_answer_processing.QAContainer;
 import multiplechoiceprototype.question_answer_processing.QuestionAnswerGenerator;
 
@@ -14,9 +12,7 @@ import multiplechoiceprototype.question_answer_processing.QuestionAnswerGenerato
 public class MainFrame extends javax.swing.JFrame {
 
     private QAContainer QACon;
-    public static AnswerButton correctAnswer = null;
-    public static List<AnswerButton> buttonList;
-    
+
     /**
      * 
      */
@@ -37,7 +33,6 @@ public class MainFrame extends javax.swing.JFrame {
     private void getQACon() {
         
         QACon = QuestionAnswerGenerator.getQACon();
-        buttonList = new ArrayList<>();
     }
     
     private void setQuestion() {
@@ -46,25 +41,11 @@ public class MainFrame extends javax.swing.JFrame {
         qp.setQuestion("<html>" + QACon.question + "</html>");
         QuestionContainer.add(qp);
     }
-    
-    public AnswerButton getCorrectAnswerButton() {
-        
-        return correctAnswer;
-    }
-    
+
     private void setAnswers() {
         
         AnswerContainer.add(new AnswerPanel(QACon));
-        for(int i = 0; i < 4; i++) {
-            
-            AnswerButton answer = new AnswerButton(QACon.correctAnswer, QACon.answers.get(i));
-            AnswerContainer.add(answer);
-            buttonList.add(answer);
-            if(answer.isCorrectAnswer()) {
-                
-                correctAnswer = answer;
-            }
-        }
+        
     }
 
     @SuppressWarnings("unchecked")
