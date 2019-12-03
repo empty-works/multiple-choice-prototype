@@ -20,6 +20,7 @@ public class QuestionPanel extends javax.swing.JPanel {
     public void setQuestion(String question) {
         
         QuestionLabel.setText(question);
+        ReasonNextContainer.add(new ReasonNextPanel());
     }
 
     @SuppressWarnings("unchecked")

@@ -72,8 +72,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         QuizContainer = new javax.swing.JPanel();
         TopPanel = new javax.swing.JPanel();
-        BottomPanel = new javax.swing.JPanel();
         InfoContainer = new javax.swing.JPanel();
+        BottomPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 640));
@@ -88,16 +88,17 @@ public class MainFrame extends javax.swing.JFrame {
         TopPanel.setLayout(new java.awt.GridLayout(1, 0));
         QuizContainer.add(TopPanel);
 
-        BottomPanel.setToolTipText(null);
-        BottomPanel.setOpaque(false);
-        BottomPanel.setLayout(new java.awt.GridLayout(4, 1));
-        QuizContainer.add(BottomPanel);
-
         getContentPane().add(QuizContainer);
 
         InfoContainer.setToolTipText(null);
         InfoContainer.setOpaque(false);
         InfoContainer.setLayout(new java.awt.GridLayout(1, 0));
+
+        BottomPanel.setToolTipText(null);
+        BottomPanel.setOpaque(false);
+        BottomPanel.setLayout(new java.awt.GridLayout(4, 1));
+        InfoContainer.add(BottomPanel);
+
         getContentPane().add(InfoContainer);
 
         pack();

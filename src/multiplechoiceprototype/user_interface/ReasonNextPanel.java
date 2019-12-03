@@ -2,6 +2,8 @@
  */
 package multiplechoiceprototype.user_interface;
 
+import multiplechoiceprototype.beans.MyColors;
+
 /**
  *
  * @author MP
@@ -19,7 +21,8 @@ public class ReasonNextPanel extends javax.swing.JPanel {
     
     private void setColors() {
         
-        
+        ReasonButton.setBackground(MyColors.REASON_NEXT_COLOR);
+        NextButton.setBackground(MyColors.REASON_NEXT_COLOR);
     }
 
     @SuppressWarnings("unchecked")
