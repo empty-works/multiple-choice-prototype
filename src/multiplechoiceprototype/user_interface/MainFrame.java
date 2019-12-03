@@ -54,7 +54,7 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void setAnswers() {
         
-        AnswerContainer.add(new AnswerPanel)
+        AnswerContainer.add(new AnswerPanel(QACon));
         for(int i = 0; i < 4; i++) {
             
             AnswerButton answer = new AnswerButton(QACon.correctAnswer, QACon.answers.get(i));
