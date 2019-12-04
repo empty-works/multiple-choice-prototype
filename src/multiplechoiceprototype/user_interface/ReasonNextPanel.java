@@ -68,6 +68,7 @@ public class ReasonNextPanel extends javax.swing.JPanel {
         ReasonButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReasonButton.setText("Why?");
         ReasonButton.setToolTipText(null);
+        ReasonButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         ReasonButton.setOpaque(true);
         ReasonButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -94,6 +95,7 @@ public class ReasonNextPanel extends javax.swing.JPanel {
         NextButton.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         NextButton.setText("Next");
         NextButton.setToolTipText(null);
+        NextButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         NextButton.setOpaque(true);
         NextButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {

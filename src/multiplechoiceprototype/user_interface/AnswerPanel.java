@@ -45,7 +45,7 @@ public class AnswerPanel extends javax.swing.JPanel {
     
     private void setReasonNext() {
         
-        BottomPanel.add(new ReasonNextPanel(QACon));
+        //BottomPanel.add(new ReasonNextPanel(QACon));
     }
 
     @SuppressWarnings("unchecked")
@@ -53,22 +53,17 @@ public class AnswerPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         TopPanel = new javax.swing.JPanel();
-        BottomPanel = new javax.swing.JPanel();
 
         setToolTipText(null);
         setOpaque(false);
-        setLayout(new java.awt.GridLayout(2, 1));
+        setLayout(new java.awt.GridLayout(1, 1));
 
         TopPanel.setLayout(new java.awt.GridLayout(4, 1));
         add(TopPanel);
-
-        BottomPanel.setLayout(new java.awt.GridLayout());
-        add(BottomPanel);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel BottomPanel;
     private javax.swing.JPanel TopPanel;
     // End of variables declaration//GEN-END:variables
 }

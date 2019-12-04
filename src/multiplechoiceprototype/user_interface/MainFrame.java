@@ -44,24 +44,51 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void setAnswers() {
         
-        AnswerContainer.add(new AnswerPanel(QACon));
+        AnswerButtonContainer.add(new AnswerPanel(QACon));
+        //AnswerContainer.add(new AnswerPanel(QACon));
     }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
+        LeftContainer = new javax.swing.JPanel();
         QuestionContainer = new javax.swing.JPanel();
+        AnswerButtonContainer = new javax.swing.JPanel();
         AnswerContainer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 640));
         getContentPane().setLayout(new java.awt.GridLayout(1, 2));
 
+        LeftContainer.setToolTipText(null);
+        LeftContainer.setOpaque(false);
+        LeftContainer.setLayout(new java.awt.GridBagLayout());
+
         QuestionContainer.setToolTipText(null);
         QuestionContainer.setOpaque(false);
-        QuestionContainer.setLayout(new java.awt.GridLayout(1, 0));
-        getContentPane().add(QuestionContainer);
+        QuestionContainer.setLayout(new java.awt.GridLayout());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.2;
+        LeftContainer.add(QuestionContainer, gridBagConstraints);
+
+        AnswerButtonContainer.setToolTipText(null);
+        AnswerButtonContainer.setOpaque(false);
+        AnswerButtonContainer.setLayout(new java.awt.GridLayout());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        LeftContainer.add(AnswerButtonContainer, gridBagConstraints);
+
+        getContentPane().add(LeftContainer);
 
         AnswerContainer.setToolTipText(null);
         AnswerContainer.setOpaque(false);
@@ -114,7 +141,9 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AnswerButtonContainer;
     private javax.swing.JPanel AnswerContainer;
+    private javax.swing.JPanel LeftContainer;
     private javax.swing.JPanel QuestionContainer;
     // End of variables declaration//GEN-END:variables
 }
