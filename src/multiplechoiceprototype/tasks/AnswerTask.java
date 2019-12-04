@@ -1,6 +1,6 @@
 /*
  */
-package multiplechoiceprototype.user_interface;
+package multiplechoiceprototype.tasks;
 
 import javafx.concurrent.Task;
 
