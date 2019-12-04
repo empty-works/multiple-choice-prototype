@@ -89,7 +89,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         BottomPanel.setBackground(new java.awt.Color(255, 255, 255));
         BottomPanel.setToolTipText(null);
-        BottomPanel.setOpaque(false);
         BottomPanel.setLayout(new java.awt.GridBagLayout());
 
         LeftFiller.setToolTipText(null);
