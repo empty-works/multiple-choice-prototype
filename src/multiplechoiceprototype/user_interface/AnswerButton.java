@@ -104,7 +104,7 @@ public class AnswerButton extends javax.swing.JPanel {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
+        gridBagConstraints.insets = new java.awt.Insets(5, 10, 5, 10);
         add(ButtonLabel, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 

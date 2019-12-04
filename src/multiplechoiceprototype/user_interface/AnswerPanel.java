@@ -51,15 +51,23 @@ public class AnswerPanel extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         TopPanel = new javax.swing.JPanel();
 
         setToolTipText(null);
         setOpaque(false);
-        setLayout(new java.awt.GridLayout(1, 1));
+        setLayout(new java.awt.GridBagLayout());
 
+        TopPanel.setBackground(new java.awt.Color(255, 255, 255));
+        TopPanel.setToolTipText(null);
         TopPanel.setLayout(new java.awt.GridLayout(4, 1));
-        add(TopPanel);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 0);
+        add(TopPanel, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
