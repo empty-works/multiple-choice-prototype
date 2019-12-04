@@ -14,4 +14,6 @@ public class MyColors {
     final public static Color INCORRECT_COLOR = new Color(255, 56, 56);
     
     final public static Color REASON_NEXT_COLOR = new Color(56, 168, 212);
+    
+    final public static Color CONTINUE_COLOR = new Color(255, 120, 10);
 }

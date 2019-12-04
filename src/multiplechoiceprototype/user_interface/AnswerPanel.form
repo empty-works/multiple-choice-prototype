@@ -61,7 +61,7 @@
         <Property name="rows" type="int" value="4"/>
       </Layout>
     </Container>
-    <Container class="javax.swing.JPanel" name="ContinueArrowContainer">
+    <Container class="javax.swing.JPanel" name="ContinueContainer">
       <Properties>
         <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
           <Connection code="null" type="code"/>
