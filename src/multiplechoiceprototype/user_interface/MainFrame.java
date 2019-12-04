@@ -93,7 +93,9 @@ public class MainFrame extends javax.swing.JFrame {
         BottomPanel.setLayout(new java.awt.GridBagLayout());
 
         LeftFiller.setToolTipText(null);
+        LeftFiller.setMinimumSize(new java.awt.Dimension(55, 10));
         LeftFiller.setOpaque(false);
+        LeftFiller.setPreferredSize(new java.awt.Dimension(55, 100));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -109,12 +111,14 @@ public class MainFrame extends javax.swing.JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.8;
+        gridBagConstraints.weightx = 1.3;
         gridBagConstraints.weighty = 0.1;
         BottomPanel.add(AnswersContainer, gridBagConstraints);
 
         ContinueContainer.setToolTipText(null);
+        ContinueContainer.setMinimumSize(new java.awt.Dimension(55, 0));
         ContinueContainer.setOpaque(false);
+        ContinueContainer.setPreferredSize(new java.awt.Dimension(55, 100));
         ContinueContainer.setLayout(new java.awt.GridLayout());
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
