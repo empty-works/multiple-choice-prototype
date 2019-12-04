@@ -53,25 +53,53 @@ public class AnswerPanel extends javax.swing.JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        LeftFillerPanel = new javax.swing.JPanel();
         TopPanel = new javax.swing.JPanel();
+        ContinueArrowContainer = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(255, 255, 255));
         setToolTipText(null);
-        setOpaque(false);
         setLayout(new java.awt.GridBagLayout());
+
+        LeftFillerPanel.setBackground(new java.awt.Color(255, 255, 255));
+        LeftFillerPanel.setToolTipText(null);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        add(LeftFillerPanel, gridBagConstraints);
 
         TopPanel.setBackground(new java.awt.Color(255, 255, 255));
         TopPanel.setToolTipText(null);
         TopPanel.setLayout(new java.awt.GridLayout(4, 1));
         gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weightx = 0.8;
         gridBagConstraints.weighty = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 0);
         add(TopPanel, gridBagConstraints);
+
+        ContinueArrowContainer.setToolTipText(null);
+        ContinueArrowContainer.setOpaque(false);
+        ContinueArrowContainer.setLayout(new java.awt.GridLayout());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 0, 10, 0);
+        add(ContinueArrowContainer, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel ContinueArrowContainer;
+    private javax.swing.JPanel LeftFillerPanel;
     private javax.swing.JPanel TopPanel;
     // End of variables declaration//GEN-END:variables
 }
