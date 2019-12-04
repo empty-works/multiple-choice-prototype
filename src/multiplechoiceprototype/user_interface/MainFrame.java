@@ -28,7 +28,7 @@ public class MainFrame extends javax.swing.JFrame {
         getQACon();
         setQuestion();
         setAnswers();
-        setReasonNext();
+        setContinue();
     }
     
     private void getQACon() {
@@ -45,12 +45,12 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void setAnswers() {
         
-        AnswerButtonContainer.add(new AnswerPanel(QACon));
+        AnswersContainer.add(new AnswerPanel(QACon));
     }
     
-    private void setReasonNext() {
+    private void setContinue() {
         
-        
+        ContinueContainer.add(new ContinueButton(QACon));
     }
 
     @SuppressWarnings("unchecked")
@@ -60,7 +60,10 @@ public class MainFrame extends javax.swing.JFrame {
 
         LeftContainer = new javax.swing.JPanel();
         QuestionContainer = new javax.swing.JPanel();
-        AnswerButtonContainer = new javax.swing.JPanel();
+        BottomPanel = new javax.swing.JPanel();
+        LeftFiller = new javax.swing.JPanel();
+        AnswersContainer = new javax.swing.JPanel();
+        ContinueContainer = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(700, 800));
@@ -75,7 +78,7 @@ public class MainFrame extends javax.swing.JFrame {
         QuestionContainer.setBackground(new java.awt.Color(255, 255, 255));
         QuestionContainer.setToolTipText(null);
         QuestionContainer.setOpaque(false);
-        QuestionContainer.setLayout(new java.awt.GridLayout());
+        QuestionContainer.setLayout(new java.awt.GridLayout(1, 0));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -84,17 +87,50 @@ public class MainFrame extends javax.swing.JFrame {
         gridBagConstraints.weighty = 0.25;
         LeftContainer.add(QuestionContainer, gridBagConstraints);
 
-        AnswerButtonContainer.setBackground(new java.awt.Color(255, 255, 255));
-        AnswerButtonContainer.setToolTipText(null);
-        AnswerButtonContainer.setOpaque(false);
-        AnswerButtonContainer.setLayout(new java.awt.GridLayout());
+        BottomPanel.setBackground(new java.awt.Color(255, 255, 255));
+        BottomPanel.setToolTipText(null);
+        BottomPanel.setOpaque(false);
+        BottomPanel.setLayout(new java.awt.GridBagLayout());
+
+        LeftFiller.setToolTipText(null);
+        LeftFiller.setOpaque(false);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        BottomPanel.add(LeftFiller, gridBagConstraints);
+
+        AnswersContainer.setToolTipText(null);
+        AnswersContainer.setOpaque(false);
+        AnswersContainer.setLayout(new java.awt.GridLayout());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.8;
+        gridBagConstraints.weighty = 0.1;
+        BottomPanel.add(AnswersContainer, gridBagConstraints);
+
+        ContinueContainer.setToolTipText(null);
+        ContinueContainer.setOpaque(false);
+        ContinueContainer.setLayout(new java.awt.GridLayout());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        BottomPanel.add(ContinueContainer, gridBagConstraints);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
-        LeftContainer.add(AnswerButtonContainer, gridBagConstraints);
+        LeftContainer.add(BottomPanel, gridBagConstraints);
 
         getContentPane().add(LeftContainer);
 
@@ -144,8 +180,11 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel AnswerButtonContainer;
+    private javax.swing.JPanel AnswersContainer;
+    private javax.swing.JPanel BottomPanel;
+    private javax.swing.JPanel ContinueContainer;
     private javax.swing.JPanel LeftContainer;
+    private javax.swing.JPanel LeftFiller;
     private javax.swing.JPanel QuestionContainer;
     // End of variables declaration//GEN-END:variables
 }

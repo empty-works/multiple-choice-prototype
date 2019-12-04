@@ -25,7 +25,6 @@ public class AnswerPanel extends javax.swing.JPanel {
         
         this.QACon = QACon;
         setAnswers();
-        setContinue();
     }
     
     private void setAnswers() {
@@ -42,34 +41,17 @@ public class AnswerPanel extends javax.swing.JPanel {
             }
         }
     }
-    
-    private void setContinue() {
-        
-        ContinueContainer.add(new ContinueButton(QACon));
-    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        LeftFillerPanel = new javax.swing.JPanel();
         TopPanel = new javax.swing.JPanel();
-        ContinueContainer = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setToolTipText(null);
         setLayout(new java.awt.GridBagLayout());
-
-        LeftFillerPanel.setBackground(new java.awt.Color(255, 255, 255));
-        LeftFillerPanel.setToolTipText(null);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.weighty = 0.1;
-        add(LeftFillerPanel, gridBagConstraints);
 
         TopPanel.setBackground(new java.awt.Color(255, 255, 255));
         TopPanel.setToolTipText(null);
@@ -82,24 +64,10 @@ public class AnswerPanel extends javax.swing.JPanel {
         gridBagConstraints.weighty = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 5, 0);
         add(TopPanel, gridBagConstraints);
-
-        ContinueContainer.setToolTipText(null);
-        ContinueContainer.setOpaque(false);
-        ContinueContainer.setLayout(new java.awt.GridLayout(1, 0));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 0.1;
-        gridBagConstraints.weighty = 0.1;
-        gridBagConstraints.insets = new java.awt.Insets(5, 0, 10, 0);
-        add(ContinueContainer, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel ContinueContainer;
-    private javax.swing.JPanel LeftFillerPanel;
     private javax.swing.JPanel TopPanel;
     // End of variables declaration//GEN-END:variables
 }
