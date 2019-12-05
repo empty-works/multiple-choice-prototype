@@ -132,17 +132,19 @@ public class AnswerButton extends javax.swing.JPanel {
 
     private void ButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMousePressed
         
-        if(isCorrectAnswer) {
+        if(isClickable) {
+            if(isCorrectAnswer) {
             
-            setButtonColor(MyColors.CORRECT_COLOR);
+                setButtonColor(MyColors.CORRECT_COLOR);
+            }
+            else {
+
+                setButtonColor(MyColors.INCORRECT_COLOR);
+                setCorrectAnswer();
+            }
+            setAnswerButtonsUnclickable();
+            setContinueButton();
         }
-        else {
-            
-            setButtonColor(MyColors.INCORRECT_COLOR);
-            setCorrectAnswer();
-        }
-        setAnswerButtonsUnclickable();
-        setContinueButton();
     }//GEN-LAST:event_ButtonLabelMousePressed
 
 
