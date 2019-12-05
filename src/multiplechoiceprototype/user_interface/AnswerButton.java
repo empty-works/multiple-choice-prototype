@@ -70,6 +70,11 @@ public class AnswerButton extends javax.swing.JPanel {
             button.setIsClickable(false);
         }
     }
+    
+    private void startAnswerTask() {
+        
+        
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

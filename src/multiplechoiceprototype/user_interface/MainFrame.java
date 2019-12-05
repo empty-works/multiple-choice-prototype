@@ -28,7 +28,7 @@ public class MainFrame extends javax.swing.JFrame {
         getQACon();
         setQuestion();
         setAnswers();
-        setContinue();
+        setContinueContainer();
     }
     
     private void getQACon() {
@@ -48,9 +48,9 @@ public class MainFrame extends javax.swing.JFrame {
         AnswersContainer.add(new AnswerPanel(QACon));
     }
     
-    private void setContinue() {
+    private void setContinueContainer() {
         
-        ContinueContainer.add(new ContinueButton(QACon));
+        QACon.ContinueContainer = ContinueContainer;
     }
 
     @SuppressWarnings("unchecked")
@@ -105,7 +105,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         AnswersContainer.setToolTipText(null);
         AnswersContainer.setOpaque(false);
-        AnswersContainer.setLayout(new java.awt.GridLayout());
+        AnswersContainer.setLayout(new java.awt.GridLayout(1, 0));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -118,7 +118,7 @@ public class MainFrame extends javax.swing.JFrame {
         ContinueContainer.setMinimumSize(new java.awt.Dimension(55, 0));
         ContinueContainer.setOpaque(false);
         ContinueContainer.setPreferredSize(new java.awt.Dimension(55, 100));
-        ContinueContainer.setLayout(new java.awt.GridLayout());
+        ContinueContainer.setLayout(new java.awt.GridLayout(1, 0));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
