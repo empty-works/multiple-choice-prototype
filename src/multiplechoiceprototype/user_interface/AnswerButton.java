@@ -6,6 +6,7 @@ import java.awt.Color;
 import javax.swing.BorderFactory;
 import multiplechoiceprototype.beans.MyColors;
 import multiplechoiceprototype.question_answer_processing.QAContainer;
+import multiplechoiceprototype.tasks.AnswerTask;
 
 /**
  *
@@ -56,7 +57,7 @@ public class AnswerButton extends javax.swing.JPanel {
         isClickable = canClick;
     }
     
-    private void setButtonColor(Color color) {
+    public void setButtonColor(Color color) {
         
         if(isClickable) {
             
@@ -72,9 +73,9 @@ public class AnswerButton extends javax.swing.JPanel {
         }
     }
     
-    private void startAnswerTask() {
+    private void setCorrectAnswer() {
         
-        
+        QACon.correctAnswerButton.setButtonColor(MyColors.CORRECT_COLOR);
     }
 
     @SuppressWarnings("unchecked")
@@ -133,6 +134,7 @@ public class AnswerButton extends javax.swing.JPanel {
         else {
             
             setButtonColor(MyColors.INCORRECT_COLOR);
+            setCorrectAnswer();
         }
         setAnswerButtonsUnclickable();
     }//GEN-LAST:event_ButtonLabelMousePressed
