@@ -79,8 +79,7 @@ public class AnswerButton extends javax.swing.JPanel {
     
     private void setContinueButton() {
         
-        QACon.ContinueContainer.add(new ContinueButton(QACon));
-        QACon.ContinueContainer.revalidate();
+        QACon.mainFrame.addContinueButton(new ContinueButton(QACon));
     }
 
     @SuppressWarnings("unchecked")

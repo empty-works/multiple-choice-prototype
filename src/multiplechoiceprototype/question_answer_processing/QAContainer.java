@@ -5,8 +5,8 @@ package multiplechoiceprototype.question_answer_processing;
 import java.awt.Cursor;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JPanel;
 import multiplechoiceprototype.user_interface.AnswerButton;
+import multiplechoiceprototype.user_interface.MainFrame;
 
 /**
  *
@@ -24,7 +24,7 @@ public class QAContainer {
     public AnswerButton correctAnswerButton = null;
     
     //UI
-    public JPanel ContinueContainer = null;
+    public MainFrame mainFrame;
     public Cursor defaultCursor = new Cursor(Cursor.DEFAULT_CURSOR);
     public Cursor handCursor = new Cursor(Cursor.HAND_CURSOR);
 }

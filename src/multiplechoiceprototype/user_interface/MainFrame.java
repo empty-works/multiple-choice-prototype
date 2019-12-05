@@ -2,6 +2,7 @@
  */
 package multiplechoiceprototype.user_interface;
 
+import javax.swing.JPanel;
 import multiplechoiceprototype.question_answer_processing.QAContainer;
 import multiplechoiceprototype.question_answer_processing.QuestionAnswerGenerator;
 
@@ -28,7 +29,7 @@ public class MainFrame extends javax.swing.JFrame {
         getQACon();
         setQuestion();
         setAnswers();
-        setContinueContainer();
+        setMain();
     }
     
     private void getQACon() {
@@ -48,9 +49,15 @@ public class MainFrame extends javax.swing.JFrame {
         AnswersContainer.add(new AnswerPanel(QACon));
     }
     
-    private void setContinueContainer() {
+    private void setMain() {
         
-        QACon.ContinueContainer = this.ContinueContainer;
+        QACon.mainFrame = this;
+    }
+    
+    public void addContinueButton(JPanel conButton) {
+        
+        ContinueContainer.add(conButton);
+        ContinueContainer.revalidate();
     }
 
     @SuppressWarnings("unchecked")

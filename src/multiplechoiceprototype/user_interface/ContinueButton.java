@@ -42,7 +42,7 @@ public class ContinueButton extends javax.swing.JPanel {
         setOpaque(false);
         setLayout(new java.awt.GridBagLayout());
 
-        ButtonLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        ButtonLabel.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         ButtonLabel.setForeground(new java.awt.Color(255, 255, 255));
         ButtonLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ButtonLabel.setText("---->");
