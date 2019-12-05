@@ -13,12 +13,15 @@ import multiplechoiceprototype.question_answer_processing.QAContainer;
  */
 public class ContinueButton extends javax.swing.JPanel {
 
+    private QAContainer QACon;
+    
     /**
      * 
      */
     public ContinueButton(QAContainer QACon) {
         initComponents();
         
+        this.QACon = QACon;
         setColors();
     }
     
@@ -68,12 +71,14 @@ public class ContinueButton extends javax.swing.JPanel {
         
         ButtonLabel.setBackground(Color.white);
         ButtonLabel.setForeground(MyColors.CONTINUE_COLOR);
+        this.setCursor(QACon.handCursor);
     }//GEN-LAST:event_ButtonLabelMouseEntered
 
     private void ButtonLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseExited
         
         ButtonLabel.setBackground(MyColors.CONTINUE_COLOR);
         ButtonLabel.setForeground(Color.white);
+        this.setCursor(QACon.defaultCursor);
     }//GEN-LAST:event_ButtonLabelMouseExited
 
     private void ButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMousePressed

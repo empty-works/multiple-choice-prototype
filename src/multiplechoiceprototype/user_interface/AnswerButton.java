@@ -123,11 +123,13 @@ public class AnswerButton extends javax.swing.JPanel {
     private void ButtonLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseEntered
         
         setButtonColor(MyColors.ANSWER_BUTTON_MOUSEOVER);
+        this.setCursor(QACon.handCursor);
     }//GEN-LAST:event_ButtonLabelMouseEntered
 
     private void ButtonLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseExited
         
         setButtonColor(Color.WHITE);
+        this.setCursor(QACon.defaultCursor);
     }//GEN-LAST:event_ButtonLabelMouseExited
 
     private void ButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMousePressed

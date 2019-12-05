@@ -2,6 +2,7 @@
  */
 package multiplechoiceprototype.question_answer_processing;
 
+import java.awt.Cursor;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JPanel;
@@ -24,4 +25,6 @@ public class QAContainer {
     
     //UI
     public JPanel ContinueContainer = null;
+    public Cursor defaultCursor = new Cursor(Cursor.DEFAULT_CURSOR);
+    public Cursor handCursor = new Cursor(Cursor.HAND_CURSOR);
 }
