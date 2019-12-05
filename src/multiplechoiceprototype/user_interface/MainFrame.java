@@ -35,7 +35,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         QACon = QuestionAnswerGenerator.getQACon();
     }
-    
+
     private void setQuestion() {
         
         QuestionPanel qp = new QuestionPanel();
@@ -50,7 +50,7 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void setContinueContainer() {
         
-        QACon.ContinueContainer = ContinueContainer;
+        QACon.ContinueContainer = this.ContinueContainer;
     }
 
     @SuppressWarnings("unchecked")
@@ -185,7 +185,7 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AnswersContainer;
     private javax.swing.JPanel BottomPanel;
-    private javax.swing.JPanel ContinueContainer;
+    public javax.swing.JPanel ContinueContainer;
     private javax.swing.JPanel LeftContainer;
     private javax.swing.JPanel LeftFiller;
     private javax.swing.JPanel QuestionContainer;

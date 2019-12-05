@@ -6,7 +6,6 @@ import java.awt.Color;
 import javax.swing.BorderFactory;
 import multiplechoiceprototype.beans.MyColors;
 import multiplechoiceprototype.question_answer_processing.QAContainer;
-import multiplechoiceprototype.tasks.AnswerTask;
 
 /**
  *
@@ -77,6 +76,12 @@ public class AnswerButton extends javax.swing.JPanel {
         
         QACon.correctAnswerButton.setButtonColor(MyColors.CORRECT_COLOR);
     }
+    
+    private void setContinueButton() {
+        
+        QACon.ContinueContainer.add(new ContinueButton(QACon));
+        QACon.ContinueContainer.revalidate();
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -137,6 +142,7 @@ public class AnswerButton extends javax.swing.JPanel {
             setCorrectAnswer();
         }
         setAnswerButtonsUnclickable();
+        setContinueButton();
     }//GEN-LAST:event_ButtonLabelMousePressed
 
 
