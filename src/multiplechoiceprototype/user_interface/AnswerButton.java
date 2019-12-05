@@ -5,6 +5,7 @@ package multiplechoiceprototype.user_interface;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import multiplechoiceprototype.beans.MyColors;
+import multiplechoiceprototype.question_answer_processing.QAContainer;
 
 /**
  *
@@ -13,14 +14,14 @@ import multiplechoiceprototype.beans.MyColors;
 public class AnswerButton extends javax.swing.JPanel {
 
     private boolean isCorrectAnswer = false;
+    private QAContainer QACon;
     private String text = "";
-    private String correctAnswer;
     private boolean isClickable = true;
     
-    public AnswerButton(String correctAnswer, String text) {
+    public AnswerButton(QAContainer QACon, String text) {
         initComponents();
         
-        this.correctAnswer = correctAnswer;
+        this.QACon = QACon;
         this.text = text;
         setVisualProperties();
         setText();
@@ -39,7 +40,7 @@ public class AnswerButton extends javax.swing.JPanel {
     
     private void setAsCorrectAnswer() {
         
-        if(correctAnswer.equals(text)) {
+        if(QACon.correctAnswer.equals(text)) {
             
             isCorrectAnswer = true;
         }
@@ -65,7 +66,7 @@ public class AnswerButton extends javax.swing.JPanel {
     
     private void setAnswerButtonsUnclickable() {
         
-        for(AnswerButton button : AnswerPanel.buttonList) {
+        for(AnswerButton button : QACon.buttonList) {
             
             button.setIsClickable(false);
         }

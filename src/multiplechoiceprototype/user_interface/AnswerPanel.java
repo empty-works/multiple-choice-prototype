@@ -2,8 +2,6 @@
  */
 package multiplechoiceprototype.user_interface;
 
-import java.util.ArrayList;
-import java.util.List;
 import multiplechoiceprototype.question_answer_processing.QAContainer;
 
 /**
@@ -13,8 +11,6 @@ import multiplechoiceprototype.question_answer_processing.QAContainer;
 public class AnswerPanel extends javax.swing.JPanel {
 
     private QAContainer QACon;
-    public static List<AnswerButton> buttonList = new ArrayList<>();
-    public static AnswerButton correctAnswer = null;
     final private int MAX_NUM_ANSWERS = 4;
     
     /**
@@ -31,13 +27,12 @@ public class AnswerPanel extends javax.swing.JPanel {
         
         for(int i = 0; i < MAX_NUM_ANSWERS; i++) {
             
-            AnswerButton answer = new AnswerButton(QACon.correctAnswer, 
-                    QACon.answers.get(i));
+            AnswerButton answer = new AnswerButton(QACon, QACon.answers.get(i));
             TopPanel.add(answer);
-            buttonList.add(answer);
+            QACon.buttonList.add(answer);
             if(answer.isCorrectAnswer()) {
                 
-                correctAnswer = answer;
+                QACon.correctAnswerButton = answer;
             }
         }
     }
