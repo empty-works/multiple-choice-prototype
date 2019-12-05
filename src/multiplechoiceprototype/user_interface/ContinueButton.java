@@ -39,7 +39,10 @@ public class ContinueButton extends javax.swing.JPanel {
         setOpaque(false);
         setLayout(new java.awt.GridBagLayout());
 
+        ButtonLabel.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        ButtonLabel.setForeground(new java.awt.Color(255, 255, 255));
         ButtonLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ButtonLabel.setText("---->");
         ButtonLabel.setToolTipText(null);
         ButtonLabel.setOpaque(true);
         ButtonLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -64,11 +67,13 @@ public class ContinueButton extends javax.swing.JPanel {
     private void ButtonLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseEntered
         
         ButtonLabel.setBackground(Color.white);
+        ButtonLabel.setForeground(MyColors.CONTINUE_COLOR);
     }//GEN-LAST:event_ButtonLabelMouseEntered
 
     private void ButtonLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseExited
         
         ButtonLabel.setBackground(MyColors.CONTINUE_COLOR);
+        ButtonLabel.setForeground(Color.white);
     }//GEN-LAST:event_ButtonLabelMouseExited
 
     private void ButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMousePressed
