@@ -83,7 +83,7 @@ public class ContinueButton extends javax.swing.JPanel {
 
     private void ButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMousePressed
         
-        
+        QACon.mainFrame.initAll();
     }//GEN-LAST:event_ButtonLabelMousePressed
 
 
