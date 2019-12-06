@@ -12,6 +12,7 @@ import multiplechoiceprototype.question_answer_processing.QuestionAnswerGenerato
 public class MainFrame extends javax.swing.JFrame {
 
     private QAContainer QACon;
+    private QuestionPanel qp;
     private ContinueButton continueButton;
 
     /**
@@ -24,13 +25,19 @@ public class MainFrame extends javax.swing.JFrame {
         initContinueButton();
     }
     
-    public void initAll() {
+    private void initAll() {
         
-        clearAll();
         getQACon();
-        setQuestion();
+        initQuestion();
         setAnswers();
         setMain();
+    }
+    
+    public void resetAll() {
+        
+         clearAll();
+         getQACon();
+         setQuestion();
     }
     
     private void getQACon() {
@@ -38,11 +45,16 @@ public class MainFrame extends javax.swing.JFrame {
         QACon = QuestionAnswerGenerator.getQACon();
     }
 
-    private void setQuestion() {
+    private void initQuestion() {
         
-        QuestionPanel qp = new QuestionPanel();
+        qp = new QuestionPanel();
         qp.setQuestion("<html>" + QACon.question + "</html>");
         QuestionContainer.add(qp);
+    }
+    
+    private void setQuestion() {
+        
+        qp.setQuestion("<html>" + QACon.question + "</html>");
     }
 
     private void setAnswers() {
@@ -69,8 +81,6 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void clearAll() {
         
-        QuestionContainer.removeAll();
-        QuestionContainer.revalidate();
         AnswersContainer.removeAll();
         AnswersContainer.revalidate();
     }
