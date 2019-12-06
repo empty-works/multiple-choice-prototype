@@ -2,6 +2,7 @@
  */
 package multiplechoiceprototype.user_interface;
 
+import multiplechoiceprototype.beans.MyColors;
 import multiplechoiceprototype.question_answer_processing.QAContainer;
 
 /**
@@ -18,6 +19,12 @@ public class ReasonButton extends javax.swing.JPanel {
     public ReasonButton(QAContainer QACon) {
         initComponents();
         this.QACon = QACon;
+        setColors();
+    }
+    
+    private void setColors() {
+        
+        MainLabel.setBackground(MyColors.REASON_COLOR);
     }
 
     @SuppressWarnings("unchecked")
