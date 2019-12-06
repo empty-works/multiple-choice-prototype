@@ -31,6 +31,7 @@ public class MainFrame extends javax.swing.JFrame {
         initQuestion();
         setAnswers();
         setMain();
+        initReason();
     }
     
     public void resetAll() {
@@ -58,7 +59,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         qp.setQuestion("<html>" + QACon.question + "</html>");
     }
-
+    
     private void setAnswers() {
         
         AnswersContainer.add(new AnswerPanel(QACon));
@@ -67,6 +68,11 @@ public class MainFrame extends javax.swing.JFrame {
     private void setMain() {
         
         QACon.mainFrame = this;
+    }
+    
+    private void initReason() {
+        
+        ReasonContainer.add(new ReasonButton(QACon));
     }
     
     private void initContinueButton() {
