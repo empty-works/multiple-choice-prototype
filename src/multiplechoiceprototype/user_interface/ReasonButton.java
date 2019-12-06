@@ -40,8 +40,31 @@ public class ReasonButton extends javax.swing.JPanel {
         MainLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         MainLabel.setText("Why?");
         MainLabel.setToolTipText(null);
+        MainLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MainLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MainLabelMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                MainLabelMousePressed(evt);
+            }
+        });
         add(MainLabel);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void MainLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MainLabelMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MainLabelMouseEntered
+
+    private void MainLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MainLabelMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MainLabelMouseExited
+
+    private void MainLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MainLabelMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MainLabelMousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
