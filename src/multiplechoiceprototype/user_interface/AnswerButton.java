@@ -77,9 +77,9 @@ public class AnswerButton extends javax.swing.JPanel {
         QACon.correctAnswerButton.setButtonColor(MyColors.CORRECT_COLOR);
     }
     
-    private void setContinueButton() {
+    private void showContinueButton() {
         
-        QACon.mainFrame.addContinueButton(new ContinueButton(QACon));
+        QACon.mainFrame.showContinueButton(true);
     }
 
     @SuppressWarnings("unchecked")
@@ -144,7 +144,7 @@ public class AnswerButton extends javax.swing.JPanel {
                 setCorrectAnswer();
             }
             setAnswerButtonsUnclickable();
-            setContinueButton();
+            showContinueButton();
         }
     }//GEN-LAST:event_ButtonLabelMousePressed
 

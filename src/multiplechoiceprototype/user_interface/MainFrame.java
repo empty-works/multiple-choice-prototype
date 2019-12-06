@@ -2,7 +2,6 @@
  */
 package multiplechoiceprototype.user_interface;
 
-import javax.swing.JPanel;
 import multiplechoiceprototype.question_answer_processing.QAContainer;
 import multiplechoiceprototype.question_answer_processing.QuestionAnswerGenerator;
 
@@ -13,16 +12,16 @@ import multiplechoiceprototype.question_answer_processing.QuestionAnswerGenerato
 public class MainFrame extends javax.swing.JFrame {
 
     private QAContainer QACon;
+    private ContinueButton continueButton;
 
     /**
      * 
      */
     public MainFrame() {
-        initComponents();
-        
+        initComponents();        
         this.setLocationRelativeTo(null);
-        
         initAll();
+        initContinueButton();
     }
     
     public void initAll() {
@@ -56,16 +55,20 @@ public class MainFrame extends javax.swing.JFrame {
         QACon.mainFrame = this;
     }
     
-    public void addContinueButton(JPanel conButton) {
+    private void initContinueButton() {
         
-        ContinueContainer.add(conButton);
-        ContinueContainer.revalidate();
+        continueButton = new ContinueButton(QACon);
+        ContinueContainer.add(continueButton);
+        continueButton.setVisible(false);
+    }
+    
+    public void showContinueButton(boolean show) {
+        
+        continueButton.setVisible(show);
     }
     
     private void clearAll() {
         
-        ContinueContainer.removeAll();
-        ContinueContainer.revalidate();
         QuestionContainer.removeAll();
         QuestionContainer.revalidate();
         AnswersContainer.removeAll();
