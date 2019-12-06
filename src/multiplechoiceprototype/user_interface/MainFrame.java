@@ -38,6 +38,8 @@ public class MainFrame extends javax.swing.JFrame {
          clearAll();
          getQACon();
          setQuestion();
+         setAnswers();
+         setMain();
     }
     
     private void getQACon() {
@@ -100,7 +102,6 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(700, 800));
         setPreferredSize(new java.awt.Dimension(700, 800));
-        setResizable(false);
         getContentPane().setLayout(new java.awt.GridLayout(1, 2));
 
         MainContainer.setToolTipText(null);
@@ -124,9 +125,9 @@ public class MainFrame extends javax.swing.JFrame {
         BottomPanel.setLayout(new java.awt.GridBagLayout());
 
         LeftFiller.setToolTipText(null);
-        LeftFiller.setMinimumSize(new java.awt.Dimension(55, 10));
+        LeftFiller.setMinimumSize(new java.awt.Dimension(65, 10));
         LeftFiller.setOpaque(false);
-        LeftFiller.setPreferredSize(new java.awt.Dimension(55, 100));
+        LeftFiller.setPreferredSize(new java.awt.Dimension(65, 100));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -142,14 +143,15 @@ public class MainFrame extends javax.swing.JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-        gridBagConstraints.weightx = 1.3;
+        gridBagConstraints.weightx = 2.1;
         gridBagConstraints.weighty = 0.1;
+        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 10);
         BottomPanel.add(AnswersContainer, gridBagConstraints);
 
         ContinueContainer.setToolTipText(null);
-        ContinueContainer.setMinimumSize(new java.awt.Dimension(55, 0));
+        ContinueContainer.setMinimumSize(new java.awt.Dimension(65, 0));
         ContinueContainer.setOpaque(false);
-        ContinueContainer.setPreferredSize(new java.awt.Dimension(55, 100));
+        ContinueContainer.setPreferredSize(new java.awt.Dimension(65, 100));
         ContinueContainer.setLayout(new java.awt.GridLayout(1, 0));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
