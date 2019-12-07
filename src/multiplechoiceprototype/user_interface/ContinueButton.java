@@ -27,7 +27,7 @@ public class ContinueButton extends javax.swing.JPanel {
     
     private void setColors() {
         
-        ButtonLabel.setBackground(MyColors.CONTINUE_COLOR);
+        ButtonLabel.setBackground(MyColors.CONTINUE_REASON_COLOR);
         ButtonLabel.setBorder(BorderFactory.createLineBorder(Color.black, 1));
     }
 
@@ -70,13 +70,13 @@ public class ContinueButton extends javax.swing.JPanel {
     private void ButtonLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseEntered
         
         ButtonLabel.setBackground(Color.white);
-        ButtonLabel.setForeground(MyColors.CONTINUE_COLOR);
+        ButtonLabel.setForeground(MyColors.CONTINUE_REASON_COLOR);
         this.setCursor(QACon.handCursor);
     }//GEN-LAST:event_ButtonLabelMouseEntered
 
     private void ButtonLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseExited
         
-        ButtonLabel.setBackground(MyColors.CONTINUE_COLOR);
+        ButtonLabel.setBackground(MyColors.CONTINUE_REASON_COLOR);
         ButtonLabel.setForeground(Color.white);
         this.setCursor(QACon.defaultCursor);
     }//GEN-LAST:event_ButtonLabelMouseExited
