@@ -81,6 +81,11 @@ public class AnswerButton extends javax.swing.JPanel {
         
         QACon.mainFrame.showContinueButton(true);
     }
+    
+    private void showReasonButton() {
+        
+        QACon.mainFrame.showReasonButton(true);
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -142,6 +147,7 @@ public class AnswerButton extends javax.swing.JPanel {
 
                 setButtonColor(MyColors.INCORRECT_COLOR);
                 setCorrectAnswer();
+                showReasonButton();
             }
             setAnswerButtonsUnclickable();
             showContinueButton();

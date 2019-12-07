@@ -14,6 +14,7 @@ public class MainFrame extends javax.swing.JFrame {
     private QAContainer QACon;
     private QuestionPanel qp;
     private ContinueButton continueButton;
+    private ReasonButton reasonButton;
 
     /**
      * 
@@ -72,7 +73,14 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void initReason() {
         
-        ReasonContainer.add(new ReasonButton(QACon));
+        reasonButton = new ReasonButton(QACon);
+        ReasonContainer.add(reasonButton);
+        reasonButton.setVisible(false);
+    }
+    
+    public void showReasonButton(boolean show) {
+        
+        reasonButton.setVisible(show);
     }
     
     private void initContinueButton() {
@@ -86,7 +94,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         continueButton.setVisible(show);
     }
-    
+
     private void clearAll() {
         
         AnswersContainer.removeAll();
@@ -134,7 +142,7 @@ public class MainFrame extends javax.swing.JFrame {
         ReasonContainer.setMinimumSize(new java.awt.Dimension(65, 10));
         ReasonContainer.setOpaque(false);
         ReasonContainer.setPreferredSize(new java.awt.Dimension(65, 100));
-        ReasonContainer.setLayout(new java.awt.GridLayout());
+        ReasonContainer.setLayout(new java.awt.GridLayout(1, 0));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;

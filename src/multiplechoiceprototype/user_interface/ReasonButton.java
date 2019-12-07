@@ -68,12 +68,16 @@ public class ReasonButton extends javax.swing.JPanel {
 
     private void ButtonLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseEntered
         
-        
+        ButtonLabel.setBackground(Color.white);
+        ButtonLabel.setForeground(MyColors.CONTINUE_REASON_COLOR);
+        this.setCursor(QACon.handCursor);
     }//GEN-LAST:event_ButtonLabelMouseEntered
 
     private void ButtonLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMouseExited
         
-        
+        ButtonLabel.setBackground(MyColors.CONTINUE_REASON_COLOR);
+        ButtonLabel.setForeground(Color.white);
+        this.setCursor(QACon.defaultCursor);
     }//GEN-LAST:event_ButtonLabelMouseExited
 
     private void ButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMousePressed
