@@ -109,6 +109,9 @@ public class MainFrame extends javax.swing.JFrame {
         MainContainer = new javax.swing.JPanel();
         QuestionContainer = new javax.swing.JPanel();
         BottomPanel = new javax.swing.JPanel();
+        AnswerLayeredPane = new javax.swing.JLayeredPane();
+        TopLayer = new javax.swing.JPanel();
+        BottomLayer = new javax.swing.JPanel();
         ReasonContainer = new javax.swing.JPanel();
         AnswersContainer = new javax.swing.JPanel();
         ContinueContainer = new javax.swing.JPanel();
@@ -136,7 +139,25 @@ public class MainFrame extends javax.swing.JFrame {
 
         BottomPanel.setBackground(new java.awt.Color(255, 255, 255));
         BottomPanel.setToolTipText(null);
-        BottomPanel.setLayout(new java.awt.GridBagLayout());
+        BottomPanel.setLayout(new java.awt.GridLayout());
+
+        AnswerLayeredPane.setLayout(new java.awt.GridBagLayout());
+
+        TopLayer.setToolTipText(null);
+        TopLayer.setOpaque(false);
+        TopLayer.setLayout(new java.awt.GridLayout());
+        AnswerLayeredPane.setLayer(TopLayer, javax.swing.JLayeredPane.POPUP_LAYER);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        AnswerLayeredPane.add(TopLayer, gridBagConstraints);
+
+        BottomLayer.setToolTipText(null);
+        BottomLayer.setOpaque(false);
+        BottomLayer.setLayout(new java.awt.GridBagLayout());
 
         ReasonContainer.setToolTipText(null);
         ReasonContainer.setMinimumSize(new java.awt.Dimension(65, 10));
@@ -149,7 +170,7 @@ public class MainFrame extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
-        BottomPanel.add(ReasonContainer, gridBagConstraints);
+        BottomLayer.add(ReasonContainer, gridBagConstraints);
 
         AnswersContainer.setToolTipText(null);
         AnswersContainer.setOpaque(false);
@@ -161,7 +182,7 @@ public class MainFrame extends javax.swing.JFrame {
         gridBagConstraints.weightx = 2.1;
         gridBagConstraints.weighty = 0.1;
         gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 10);
-        BottomPanel.add(AnswersContainer, gridBagConstraints);
+        BottomLayer.add(AnswersContainer, gridBagConstraints);
 
         ContinueContainer.setToolTipText(null);
         ContinueContainer.setMinimumSize(new java.awt.Dimension(65, 0));
@@ -174,7 +195,17 @@ public class MainFrame extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
-        BottomPanel.add(ContinueContainer, gridBagConstraints);
+        BottomLayer.add(ContinueContainer, gridBagConstraints);
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+        gridBagConstraints.weightx = 0.1;
+        gridBagConstraints.weighty = 0.1;
+        AnswerLayeredPane.add(BottomLayer, gridBagConstraints);
+
+        BottomPanel.add(AnswerLayeredPane);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -232,11 +263,14 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLayeredPane AnswerLayeredPane;
     private javax.swing.JPanel AnswersContainer;
+    private javax.swing.JPanel BottomLayer;
     private javax.swing.JPanel BottomPanel;
     public javax.swing.JPanel ContinueContainer;
     private javax.swing.JPanel MainContainer;
     private javax.swing.JPanel QuestionContainer;
     private javax.swing.JPanel ReasonContainer;
+    private javax.swing.JPanel TopLayer;
     // End of variables declaration//GEN-END:variables
 }
