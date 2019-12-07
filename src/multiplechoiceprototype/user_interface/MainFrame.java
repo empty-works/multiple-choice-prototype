@@ -15,6 +15,7 @@ public class MainFrame extends javax.swing.JFrame {
     private QuestionPanel qp;
     private ContinueButton continueButton;
     private ReasonButton reasonButton;
+    private ReasonTextContainer reasonTextContainer;
 
     /**
      * 
@@ -33,6 +34,7 @@ public class MainFrame extends javax.swing.JFrame {
         setAnswers();
         setMain();
         initReason();
+        initReasonText();
     }
     
     public void resetAll() {
@@ -78,6 +80,12 @@ public class MainFrame extends javax.swing.JFrame {
         reasonButton.setVisible(false);
     }
     
+    private void initReasonText() {
+        
+        reasonTextContainer = new ReasonTextContainer(QACon);
+        ReasonTextLayer.add(reasonTextContainer);
+    }
+    
     public void showReasonButton(boolean show) {
         
         reasonButton.setVisible(show);
@@ -110,7 +118,7 @@ public class MainFrame extends javax.swing.JFrame {
         QuestionContainer = new javax.swing.JPanel();
         BottomPanel = new javax.swing.JPanel();
         AnswerLayeredPane = new javax.swing.JLayeredPane();
-        TopLayer = new javax.swing.JPanel();
+        ReasonTextLayer = new javax.swing.JPanel();
         BottomLayer = new javax.swing.JPanel();
         ReasonContainer = new javax.swing.JPanel();
         AnswersContainer = new javax.swing.JPanel();
@@ -139,21 +147,21 @@ public class MainFrame extends javax.swing.JFrame {
 
         BottomPanel.setBackground(new java.awt.Color(255, 255, 255));
         BottomPanel.setToolTipText(null);
-        BottomPanel.setLayout(new java.awt.GridLayout());
+        BottomPanel.setLayout(new java.awt.GridLayout(1, 0));
 
         AnswerLayeredPane.setLayout(new java.awt.GridBagLayout());
 
-        TopLayer.setToolTipText(null);
-        TopLayer.setOpaque(false);
-        TopLayer.setLayout(new java.awt.GridLayout());
-        AnswerLayeredPane.setLayer(TopLayer, javax.swing.JLayeredPane.POPUP_LAYER);
+        ReasonTextLayer.setToolTipText(null);
+        ReasonTextLayer.setOpaque(false);
+        ReasonTextLayer.setLayout(new java.awt.GridLayout(1, 0));
+        AnswerLayeredPane.setLayer(ReasonTextLayer, javax.swing.JLayeredPane.POPUP_LAYER);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
         gridBagConstraints.weightx = 0.1;
         gridBagConstraints.weighty = 0.1;
-        AnswerLayeredPane.add(TopLayer, gridBagConstraints);
+        AnswerLayeredPane.add(ReasonTextLayer, gridBagConstraints);
 
         BottomLayer.setToolTipText(null);
         BottomLayer.setOpaque(false);
@@ -271,6 +279,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel MainContainer;
     private javax.swing.JPanel QuestionContainer;
     private javax.swing.JPanel ReasonContainer;
-    private javax.swing.JPanel TopLayer;
+    private javax.swing.JPanel ReasonTextLayer;
     // End of variables declaration//GEN-END:variables
 }

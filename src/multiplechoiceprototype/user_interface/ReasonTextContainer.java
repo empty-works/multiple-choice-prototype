@@ -2,16 +2,20 @@
  */
 package multiplechoiceprototype.user_interface;
 
+import multiplechoiceprototype.question_answer_processing.QAContainer;
+
 /**
  *
  * @author MP
  */
 public class ReasonTextContainer extends javax.swing.JPanel {
 
+    private QAContainer QACon;
+    
     /**
      * 
      */
-    public ReasonTextContainer() {
+    public ReasonTextContainer(QAContainer QACon) {
         initComponents();
     }
     
@@ -30,7 +34,6 @@ public class ReasonTextContainer extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
         setToolTipText(null);
-        setOpaque(false);
         setLayout(new java.awt.GridBagLayout());
 
         CloseButton.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N

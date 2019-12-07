@@ -87,7 +87,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout"/>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="TopLayer">
+                <Container class="javax.swing.JPanel" name="ReasonTextLayer">
                   <Properties>
                     <Property name="toolTipText" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection code="null" type="code"/>
