@@ -23,6 +23,11 @@ public class ReasonTextContainer extends javax.swing.JPanel {
         
         TextLabel.setText(text);
     }
+    
+    public void setVisible(boolean show) {
+        
+        this.setVisible(show);
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -74,7 +79,7 @@ public class ReasonTextContainer extends javax.swing.JPanel {
 
     private void CloseButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseButtonMousePressed
         
-        this.setVisible(false);
+        setVisible(false);
     }//GEN-LAST:event_CloseButtonMousePressed
 
 

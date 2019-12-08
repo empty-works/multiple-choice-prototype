@@ -84,6 +84,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         reasonTextContainer = new ReasonTextContainer(QACon);
         ReasonTextLayer.add(reasonTextContainer);
+        reasonTextContainer.setVisible(false);
     }
     
     public void showReasonButton(boolean show) {
