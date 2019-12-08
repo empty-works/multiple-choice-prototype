@@ -17,6 +17,7 @@ public class ReasonTextContainer extends javax.swing.JPanel {
      */
     public ReasonTextContainer(QAContainer QACon) {
         initComponents();
+        this.QACon = QACon;
     }
     
     public void setText(String text) {
@@ -44,6 +45,12 @@ public class ReasonTextContainer extends javax.swing.JPanel {
         CloseButton.setMinimumSize(new java.awt.Dimension(40, 40));
         CloseButton.setPreferredSize(new java.awt.Dimension(40, 40));
         CloseButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                CloseButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CloseButtonMouseExited(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 CloseButtonMousePressed(evt);
             }
@@ -76,6 +83,16 @@ public class ReasonTextContainer extends javax.swing.JPanel {
         
         this.setVisible(false);
     }//GEN-LAST:event_CloseButtonMousePressed
+
+    private void CloseButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseButtonMouseEntered
+        
+        this.setCursor(QACon.handCursor);
+    }//GEN-LAST:event_CloseButtonMouseEntered
+
+    private void CloseButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseButtonMouseExited
+        
+        this.setCursor(QACon.handCursor);
+    }//GEN-LAST:event_CloseButtonMouseExited
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
