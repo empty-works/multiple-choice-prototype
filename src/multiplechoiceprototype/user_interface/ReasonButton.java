@@ -82,7 +82,7 @@ public class ReasonButton extends javax.swing.JPanel {
 
     private void ButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonLabelMousePressed
         
-        
+        QACon.reasonTextContainer.setVisible(true);
     }//GEN-LAST:event_ButtonLabelMousePressed
 
 
