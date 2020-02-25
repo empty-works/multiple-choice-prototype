@@ -6,12 +6,12 @@ package multiplechoiceprototype.new_ui;
  *
  * @author MP
  */
-public class MainGrid extends javafx.scene.layout.HBox {
+public class MainContainer extends javafx.scene.layout.HBox {
     
     private QuestionContainer questionCon;
     private ChoicesContainer choicesCon;
     
-    public MainGrid() {
+    public MainContainer() {
         
         setContainers();
     }

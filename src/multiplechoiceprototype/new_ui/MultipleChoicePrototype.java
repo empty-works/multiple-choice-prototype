@@ -2,6 +2,7 @@
  */
 package multiplechoiceprototype.new_ui;
 
+import java.net.URL;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -19,10 +20,12 @@ public class MultipleChoicePrototype extends Application {
     public void start(Stage primaryStage) throws Exception {
         
         // Set root.
-        
+        MainContainer mainCon = new MainContainer();
         
         // Set scene.
-        
+        scene = new Scene(mainCon);
+        URL stylesheetURL = getClass().getResource("multipleChoiceStylesheet.css");
+        scene.getStylesheets().add(stylesheetURL.toExternalForm());
         
         // Set stage.
         setPrimaryStage(primaryStage);
