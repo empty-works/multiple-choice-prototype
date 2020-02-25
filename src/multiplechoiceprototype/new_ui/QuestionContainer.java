@@ -22,9 +22,8 @@ public class QuestionContainer extends javafx.scene.layout.HBox {
     private void setLabel() {
         
         mainLabel.prefWidthProperty().bind(this.widthProperty());
+        mainLabel.prefHeightProperty().bind(this.heightProperty());
         
-        AnchorPane.setLeftAnchor(mainLabel, 0.0);
-        AnchorPane.setRightAnchor(mainLabel, 0.0);
-        
+        this.getChildren().add(mainLabel);
     }
 }
