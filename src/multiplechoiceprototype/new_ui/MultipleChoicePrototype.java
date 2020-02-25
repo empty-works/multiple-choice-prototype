@@ -1,6 +1,6 @@
 /*
  */
-package multiplechoiceprototype.user_interface;
+package multiplechoiceprototype.new_ui;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
