@@ -8,19 +8,25 @@ package multiplechoiceprototype.new_ui;
  */
 public class MainGrid extends javafx.scene.layout.HBox {
     
+    private QuestionContainer questionCon;
+    private ChoicesContainer choicesCon;
+    
     public MainGrid() {
         
-        setQuestionBlock();
-        setMultipleChoiceBlock();
+        setContainers();
     }
     
-    private void setQuestionBlock() {
+    private void setContainers() {
         
+        questionCon = new QuestionContainer();
+        choicesCon = new ChoicesContainer();
         
-    }
-    
-    private void setMultipleChoiceBlock() {
+        questionCon.prefWidthProperty().bind(this.widthProperty());
+        choicesCon.prefWidthProperty().bind(this.widthProperty());
         
+        questionCon.prefHeightProperty().bind(this.heightProperty().divide(2));
+        choicesCon.prefHeightProperty().bind(this.heightProperty().divide(1));
         
+        this.getChildren().addAll(questionCon, choicesCon);
     }
 }
