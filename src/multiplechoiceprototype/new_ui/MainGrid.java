@@ -6,7 +6,7 @@ package multiplechoiceprototype.new_ui;
  *
  * @author MP
  */
-public class MainGrid extends javafx.scene.layout.GridPane {
+public class MainGrid extends javafx.scene.layout.HBox {
     
     public MainGrid() {
         
