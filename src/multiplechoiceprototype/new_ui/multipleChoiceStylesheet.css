@@ -1,0 +1,15 @@
+/*
+*/
+/* 
+    Author     : MP
+*/
+
+#QuestionContainer {
+    
+    -fx-background-color: black;
+}
+
+#ChoicesContainer {
+    
+    -fx-background-color: purple;
+}

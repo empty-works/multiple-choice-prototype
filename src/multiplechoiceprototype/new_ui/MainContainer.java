@@ -6,7 +6,7 @@ package multiplechoiceprototype.new_ui;
  *
  * @author MP
  */
-public class MainContainer extends javafx.scene.layout.HBox {
+public class MainContainer extends javafx.scene.layout.GridPane {
     
     private QuestionContainer questionCon;
     private ChoicesContainer choicesCon;
@@ -24,9 +24,10 @@ public class MainContainer extends javafx.scene.layout.HBox {
         questionCon.prefWidthProperty().bind(this.widthProperty());
         choicesCon.prefWidthProperty().bind(this.widthProperty());
         
-        questionCon.prefHeightProperty().bind(this.heightProperty().divide(2));
-        choicesCon.prefHeightProperty().bind(this.heightProperty().divide(1));
+        questionCon.prefHeightProperty().bind(this.heightProperty().divide(1.1));
+        choicesCon.prefHeightProperty().bind(this.heightProperty().divide(2));
         
-        this.getChildren().addAll(questionCon, choicesCon);
+        this.add(questionCon, 0, 0);
+        this.add(choicesCon, 0, 1);
     }
 }
