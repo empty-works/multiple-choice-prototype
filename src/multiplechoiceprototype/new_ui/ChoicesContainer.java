@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
  */
 public class ChoicesContainer extends javafx.scene.layout.HBox {
     
+    //TODO set ChoiceLabel objects in ChoicesContainer
     public ChoicesContainer() {
         
         this.setId("ChoicesContainer");

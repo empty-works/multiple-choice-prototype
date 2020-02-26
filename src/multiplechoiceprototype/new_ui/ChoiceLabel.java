@@ -8,8 +8,13 @@ package multiplechoiceprototype.new_ui;
  */
 public class ChoiceLabel extends javafx.scene.control.Label {
     
-    public ChoiceLabel() {
+    private String text;
+    
+    //TODO: finish ChoiceLabel
+    public ChoiceLabel(String text) {
         
-        
+        this.setId("ChoiceLabel");
+        this.text = text;
+        this.setText(text);
     }
 }
