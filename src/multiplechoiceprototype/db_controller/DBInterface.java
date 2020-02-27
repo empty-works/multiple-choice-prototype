@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface DBInterface {
     
-    public String getQuestion();
+    public List<String> getQuestion(String level);
     
-    public List<String> getAnswers();
+    public List<String[]> getAnswers(String level);
 }
