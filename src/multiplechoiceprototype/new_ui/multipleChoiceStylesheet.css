@@ -4,9 +4,10 @@
 
 #QuestionContainer .label {
     
-    -fx-background-color: red;
-    -fx-font-size: 14;
+    -fx-background-color: white;
+    -fx-font-size: 16;
     -fx-text-fill: black;
+    -fx-font-weight: bold;
     -fx-font-family: 'arial';
 }
 
