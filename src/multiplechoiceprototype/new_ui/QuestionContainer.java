@@ -2,8 +2,8 @@
  */
 package multiplechoiceprototype.new_ui;
 
+import javafx.geometry.Insets;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
 
 /**
  *
@@ -12,17 +12,21 @@ import javafx.scene.layout.AnchorPane;
 public class QuestionContainer extends javafx.scene.layout.HBox {
     
     private Label mainLabel = new Label();
+    private String text;
     
-    public QuestionContainer() {
+    public QuestionContainer(String text) {
         
+        this.text = text;
         this.setId("QuestionContainer");
         setLabel();
     }
     
     private void setLabel() {
         
+        mainLabel.setText(text);
         mainLabel.prefWidthProperty().bind(this.widthProperty());
         mainLabel.prefHeightProperty().bind(this.heightProperty());
+        mainLabel.setPadding(new Insets(20));
         
         this.getChildren().add(mainLabel);
     }

@@ -18,7 +18,7 @@ public class MainContainer extends javafx.scene.layout.GridPane {
     
     private void setContainers() {
         
-        questionCon = new QuestionContainer();
+        questionCon = new QuestionContainer("KLJDÖLFKjlskdjfalkdjf");
         choicesCon = new ChoicesContainer();
         
         questionCon.prefWidthProperty().bind(this.widthProperty());

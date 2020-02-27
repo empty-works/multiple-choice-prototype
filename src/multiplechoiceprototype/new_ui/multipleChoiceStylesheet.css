@@ -1,12 +1,13 @@
-/*
-*/
 /* 
     Author     : MP
 */
 
 #QuestionContainer .label {
     
-    -fx-background-color: black;
+    -fx-background-color: red;
+    -fx-font-size: 14;
+    -fx-text-fill: black;
+    -fx-font-family: 'arial';
 }
 
 #ChoicesContainer {
