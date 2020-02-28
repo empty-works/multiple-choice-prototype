@@ -19,7 +19,6 @@ public class MainContainer extends javafx.scene.layout.GridPane {
     private QuestionContainer questionCon;
     private ChoicesContainer choicesCon;
     private String subject;
-    private List<QuestionContainer> questionList = new ArrayList<>();
     
     public MainContainer() {
         
@@ -33,26 +32,23 @@ public class MainContainer extends javafx.scene.layout.GridPane {
     }
     
     private void setContainers() {
-        
-        DBInterface dbcon = new DBController();
-        
-        // Get questions
-        List<String> questionsList = dbcon.getQuestions(subject);
-        List<String[]> answersList = dbcon.getAnswers(subject);
-        
+
         MenuBar menubar = new MenuBar();
         Menu settings = new Menu("Settings");
         menubar.getMenus().add(settings);
         MenuItem random = new MenuItem("Random");
         settings.getItems().add(random);
         
+        DBInterface dbcon = new DBController();
+        
+        List<String> questionsList = dbcon.getQuestions(subject);
         questionCon = new QuestionContainer(questionsList.get(0));
-        choicesCon = new ChoicesContainer(answersList);
-        
         questionCon.prefWidthProperty().bind(this.widthProperty());
-        choicesCon.prefWidthProperty().bind(this.widthProperty());
-        
         questionCon.prefHeightProperty().bind(this.heightProperty().divide(1.1));
+        
+        List<String[]> answersList = dbcon.getAnswers(subject);
+        choicesCon = new ChoicesContainer(answersList);
+        choicesCon.prefWidthProperty().bind(this.widthProperty());
         choicesCon.prefHeightProperty().bind(this.heightProperty().divide(2));
         
         this.add(menubar, 0, 0);
