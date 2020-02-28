@@ -38,6 +38,7 @@ public class MainContainer extends javafx.scene.layout.GridPane {
         
         // Get questions
         List<String> questionsList = dbcon.getQuestions(subject);
+        List<String[]> answersList = dbcon.getAnswers(subject);
         
         MenuBar menubar = new MenuBar();
         Menu settings = new Menu("Settings");
@@ -46,7 +47,7 @@ public class MainContainer extends javafx.scene.layout.GridPane {
         settings.getItems().add(random);
         
         questionCon = new QuestionContainer(questionsList.get(0));
-        choicesCon = new ChoicesContainer();
+        choicesCon = new ChoicesContainer(answersList);
         
         questionCon.prefWidthProperty().bind(this.widthProperty());
         choicesCon.prefWidthProperty().bind(this.widthProperty());

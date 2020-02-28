@@ -2,6 +2,7 @@
  */
 package multiplechoiceprototype.new_ui;
 
+import java.util.List;
 import javafx.scene.control.Label;
 
 /**
@@ -11,7 +12,7 @@ import javafx.scene.control.Label;
 public class ChoicesContainer extends javafx.scene.layout.HBox {
     
     //TODO set ChoiceLabel objects in ChoicesContainer
-    public ChoicesContainer() {
+    public ChoicesContainer(List<String[]> answers) {
         
         this.setId("ChoicesContainer");
     }
