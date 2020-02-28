@@ -18,13 +18,13 @@ public class DBController implements DBInterface {
     @Override
     public List<String> getQuestions(String subject) {
         
-        
+        return null;
     }
 
     @Override
     public List<String[]> getAnswers(String subject) {
         
-        
+        return null;
     }
     
     
