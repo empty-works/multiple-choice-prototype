@@ -10,8 +10,13 @@ import java.util.List;
  */
 public class DBController implements DBInterface {
 
+    public DBController() {
+        
+        
+    }
+    
     @Override
-    public List<String> getQuestion(String level) {
+    public List<String> getQuestions(String level) {
         
         
     }
@@ -21,4 +26,6 @@ public class DBController implements DBInterface {
         
         
     }
+    
+    
 }

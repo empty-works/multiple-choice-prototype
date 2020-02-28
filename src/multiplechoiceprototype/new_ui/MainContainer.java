@@ -2,6 +2,9 @@
  */
 package multiplechoiceprototype.new_ui;
 
+import multiplechoiceprototype.db_controller.DBController;
+import multiplechoiceprototype.db_controller.DBInterface;
+
 /**
  *
  * @author MP
@@ -10,13 +13,25 @@ public class MainContainer extends javafx.scene.layout.GridPane {
     
     private QuestionContainer questionCon;
     private ChoicesContainer choicesCon;
+    private String level;
     
     public MainContainer() {
         
-        setContainers();
+        level = getLevel();
+        setContainers(level);
     }
     
-    private void setContainers() {
+    private String getLevel() {
+        
+        
+    }
+    
+    private void setContainers(String level) {
+        
+        DBInterface dbcon = new DBController();
+        
+        // Get questions
+        List<String> questionsList = dbcon.getQuestions(level);
         
         questionCon = new QuestionContainer("KLJDÖLFKjlskdjfalkdjf");
         choicesCon = new ChoicesContainer();
