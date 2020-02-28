@@ -16,13 +16,13 @@ public class DBController implements DBInterface {
     }
     
     @Override
-    public List<String> getQuestions(String level) {
+    public List<String> getQuestions(String subject) {
         
         
     }
 
     @Override
-    public List<String[]> getAnswers(String level) {
+    public List<String[]> getAnswers(String subject) {
         
         
     }
