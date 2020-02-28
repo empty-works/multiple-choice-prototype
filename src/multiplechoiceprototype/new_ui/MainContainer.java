@@ -2,6 +2,7 @@
  */
 package multiplechoiceprototype.new_ui;
 
+import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
@@ -18,6 +19,7 @@ public class MainContainer extends javafx.scene.layout.GridPane {
     private QuestionContainer questionCon;
     private ChoicesContainer choicesCon;
     private String subject;
+    private List<QuestionContainer> questionList = new ArrayList<>();
     
     public MainContainer() {
         
@@ -43,7 +45,7 @@ public class MainContainer extends javafx.scene.layout.GridPane {
         MenuItem random = new MenuItem("Random");
         settings.getItems().add(random);
         
-        questionCon = new QuestionContainer("KLJDÖLFKjlskdjfalkdjf");
+        questionCon = new QuestionContainer(questionsList.get(0));
         choicesCon = new ChoicesContainer();
         
         questionCon.prefWidthProperty().bind(this.widthProperty());
