@@ -3,6 +3,7 @@
 package multiplechoiceprototype.new_ui;
 
 import java.util.List;
+import javafx.collections.ObservableList;
 import javafx.scene.control.Label;
 
 /**
@@ -11,13 +12,14 @@ import javafx.scene.control.Label;
  */
 public class AnswersContainer extends javafx.scene.layout.HBox {
     
-    //TODO Create Label objects.
+    private AnswerLabel choice1, choice2, choice3, choice4;
     private String[] answers;
     
     public AnswersContainer(String[] answers) {
         
         this.setId("ChoicesContainer");
         setLocalArray(answers);
+        setLabels();
     }
     
     private void setLocalArray(String[] answers) {
@@ -30,6 +32,12 @@ public class AnswersContainer extends javafx.scene.layout.HBox {
     
     private void setLabels() {
         
+        choice1 = new AnswerLabel(answers[0]);
+        choice2 = new AnswerLabel(answers[1]);
+        choice3 = new AnswerLabel(answers[2]);
+        choice4 = new AnswerLabel(answers[3]);
         
+        ObservableList list = this.getChildren();
+        list.addAll(choice1, choice2, choice3, choice4);
     }
 }
