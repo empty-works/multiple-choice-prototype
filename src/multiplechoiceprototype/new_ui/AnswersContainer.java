@@ -3,6 +3,8 @@
 package multiplechoiceprototype.new_ui;
 
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
+import javafx.scene.layout.AnchorPane;
 
 /**
  *
@@ -10,7 +12,7 @@ import javafx.collections.ObservableList;
  */
 public class AnswersContainer extends javafx.scene.layout.VBox {
     
-    private AnswerLabel choice1, choice2, choice3, choice4;
+    private AnswerButton choice1, choice2, choice3, choice4;
     private String[] answers = new String[4];
     
     public AnswersContainer(String[] answers) {
@@ -31,10 +33,15 @@ public class AnswersContainer extends javafx.scene.layout.VBox {
     
     private void setLabels() {
         
-        choice1 = new AnswerLabel(answers[0]);
-        choice2 = new AnswerLabel(answers[1]);
-        choice3 = new AnswerLabel(answers[2]);
-        choice4 = new AnswerLabel(answers[3]);
+        choice1 = new AnswerButton(answers[0]);
+        choice2 = new AnswerButton(answers[1]);
+        choice3 = new AnswerButton(answers[2]);
+        choice4 = new AnswerButton(answers[3]);
+        
+        choice1.prefWidthProperty().bind(this.widthProperty());
+        choice2.prefWidthProperty().bind(this.widthProperty());
+        choice3.prefWidthProperty().bind(this.widthProperty());
+        choice4.prefWidthProperty().bind(this.widthProperty());
         
         ObservableList list = this.getChildren();
         list.addAll(choice1, choice2, choice3, choice4);
