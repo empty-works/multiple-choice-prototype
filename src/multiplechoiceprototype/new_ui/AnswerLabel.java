@@ -9,12 +9,12 @@ import javafx.scene.layout.AnchorPane;
  *
  * @author MP
  */
-public class ChoiceLabel extends javafx.scene.control.Label {
+public class AnswerLabel extends javafx.scene.control.Label {
     
     private String text;
     
-    //TODO: finish ChoiceLabel
-    public ChoiceLabel(String text) {
+    //TODO: finish AnswerLabel
+    public AnswerLabel(String text) {
         
         this.setId("ChoiceLabel");
         this.text = text;

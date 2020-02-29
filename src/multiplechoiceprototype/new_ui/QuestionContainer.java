@@ -2,6 +2,7 @@
  */
 package multiplechoiceprototype.new_ui;
 
+import java.util.List;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -13,18 +14,18 @@ import javafx.scene.control.Label;
 public class QuestionContainer extends javafx.scene.layout.HBox {
     
     private Label mainLabel = new Label();
-    private String text;
+    private String question;
     
-    public QuestionContainer(String text) {
+    public QuestionContainer(String question) {
         
-        this.text = text;
+        this.question = question;
         this.setId("QuestionContainer");
         setLabel();
     }
     
     private void setLabel() {
         
-        mainLabel.setText(text);
+        mainLabel.setText(question);
         mainLabel.setAlignment(Pos.TOP_LEFT);
         mainLabel.prefWidthProperty().bind(this.widthProperty());
         mainLabel.prefHeightProperty().bind(this.heightProperty());

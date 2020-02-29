@@ -2,7 +2,6 @@
  */
 package multiplechoiceprototype.new_ui;
 
-import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
@@ -17,7 +16,7 @@ import multiplechoiceprototype.db_controller.DBInterface;
 public class MainContainer extends javafx.scene.layout.GridPane {
     
     private QuestionContainer questionCon;
-    private ChoicesContainer choicesCon;
+    private AnswersContainer choicesCon;
     private String subject;
     
     public MainContainer() {
@@ -40,14 +39,15 @@ public class MainContainer extends javafx.scene.layout.GridPane {
         settings.getItems().add(random);
         
         DBInterface dbcon = new DBController();
+        int DEFAULT_INDEX = 0;
         
         List<String> questionsList = dbcon.getQuestions(subject);
-        questionCon = new QuestionContainer(questionsList.get(0));
+        questionCon = new QuestionContainer(questionsList.get(DEFAULT_INDEX));
         questionCon.prefWidthProperty().bind(this.widthProperty());
         questionCon.prefHeightProperty().bind(this.heightProperty().divide(1.1));
         
         List<String[]> answersList = dbcon.getAnswers(subject);
-        choicesCon = new ChoicesContainer(answersList);
+        choicesCon = new AnswersContainer(answersList.get(DEFAULT_INDEX));
         choicesCon.prefWidthProperty().bind(this.widthProperty());
         choicesCon.prefHeightProperty().bind(this.heightProperty().divide(2));
         
