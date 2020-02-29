@@ -8,7 +8,7 @@ import javafx.collections.ObservableList;
  *
  * @author MP
  */
-public class AnswersContainer extends javafx.scene.layout.HBox {
+public class AnswersContainer extends javafx.scene.layout.VBox {
     
     private AnswerLabel choice1, choice2, choice3, choice4;
     private String[] answers = new String[4];
