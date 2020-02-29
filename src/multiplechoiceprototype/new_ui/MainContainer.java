@@ -47,6 +47,7 @@ public class MainContainer extends javafx.scene.layout.GridPane {
         questionCon.prefHeightProperty().bind(this.heightProperty().divide(1.1));
         
         List<String[]> answersList = dbcon.getAnswers(subject);
+        System.out.println("answersList: " + answersList);
         choicesCon = new AnswersContainer(answersList.get(DEFAULT_INDEX));
         choicesCon.prefWidthProperty().bind(this.widthProperty());
         choicesCon.prefHeightProperty().bind(this.heightProperty().divide(2));
