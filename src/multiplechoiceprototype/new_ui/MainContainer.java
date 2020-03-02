@@ -6,8 +6,8 @@ import java.util.List;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
-import multiplechoiceprototype.db_controller.DBController;
-import multiplechoiceprototype.db_controller.DBInterface;
+import multiplechoiceprototype.controllers.DBController;
+import multiplechoiceprototype.controllers.DBInterface;
 
 /**
  *

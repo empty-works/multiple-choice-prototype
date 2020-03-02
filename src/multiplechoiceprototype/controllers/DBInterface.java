@@ -1,6 +1,6 @@
 /*
  */
-package multiplechoiceprototype.db_controller;
+package multiplechoiceprototype.controllers;
 
 import java.util.List;
 

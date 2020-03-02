@@ -48,5 +48,13 @@ public class AnswerButton extends javafx.scene.control.Button {
                 AnswerButton.this.setEffect(null);
             }
         });
+        
+        this.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                
+                
+            }
+        });
     }
 }
