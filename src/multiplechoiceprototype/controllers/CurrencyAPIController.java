@@ -4,7 +4,6 @@ package multiplechoiceprototype.controllers;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 
@@ -14,7 +13,7 @@ import javafx.fxml.Initializable;
  */
 public class CurrencyAPIController implements Initializable {
     
-    private URLConnection urlCon;
+    private CustomURLConnection urlCon;
     
     public CurrencyAPIController() {
         
